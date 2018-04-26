@@ -10,7 +10,7 @@ options :: Options
 
 ``` purescript
 newtype AcceptInvitationRequest
-  = AcceptInvitationRequest { "DetectorId" :: String, "InvitationId" :: NullOrUndefined (InvitationId), "MasterId" :: NullOrUndefined (MasterId) }
+  = AcceptInvitationRequest { "DetectorId" :: String, "InvitationId" :: Maybe (InvitationId), "MasterId" :: Maybe (MasterId) }
 ```
 
 AcceptInvitation request body.
@@ -35,7 +35,7 @@ Constructs AcceptInvitationRequest from required parameters
 #### `newAcceptInvitationRequest'`
 
 ``` purescript
-newAcceptInvitationRequest' :: String -> ({ "DetectorId" :: String, "InvitationId" :: NullOrUndefined (InvitationId), "MasterId" :: NullOrUndefined (MasterId) } -> { "DetectorId" :: String, "InvitationId" :: NullOrUndefined (InvitationId), "MasterId" :: NullOrUndefined (MasterId) }) -> AcceptInvitationRequest
+newAcceptInvitationRequest' :: String -> ({ "DetectorId" :: String, "InvitationId" :: Maybe (InvitationId), "MasterId" :: Maybe (MasterId) } -> { "DetectorId" :: String, "InvitationId" :: Maybe (InvitationId), "MasterId" :: Maybe (MasterId) }) -> AcceptInvitationRequest
 ```
 
 Constructs AcceptInvitationRequest's fields from required parameters
@@ -60,7 +60,7 @@ Encode AcceptInvitationResponse
 
 ``` purescript
 newtype AccessKeyDetails
-  = AccessKeyDetails { "AccessKeyId" :: NullOrUndefined (String), "PrincipalId" :: NullOrUndefined (String), "UserName" :: NullOrUndefined (String), "UserType" :: NullOrUndefined (String) }
+  = AccessKeyDetails { "AccessKeyId" :: Maybe (String), "PrincipalId" :: Maybe (String), "UserName" :: Maybe (String), "UserType" :: Maybe (String) }
 ```
 
 The IAM access key details (IAM user information) of a user that engaged in the activity that prompted GuardDuty to generate a finding.
@@ -85,7 +85,7 @@ Constructs AccessKeyDetails from required parameters
 #### `newAccessKeyDetails'`
 
 ``` purescript
-newAccessKeyDetails' :: ({ "AccessKeyId" :: NullOrUndefined (String), "PrincipalId" :: NullOrUndefined (String), "UserName" :: NullOrUndefined (String), "UserType" :: NullOrUndefined (String) } -> { "AccessKeyId" :: NullOrUndefined (String), "PrincipalId" :: NullOrUndefined (String), "UserName" :: NullOrUndefined (String), "UserType" :: NullOrUndefined (String) }) -> AccessKeyDetails
+newAccessKeyDetails' :: ({ "AccessKeyId" :: Maybe (String), "PrincipalId" :: Maybe (String), "UserName" :: Maybe (String), "UserType" :: Maybe (String) } -> { "AccessKeyId" :: Maybe (String), "PrincipalId" :: Maybe (String), "UserName" :: Maybe (String), "UserType" :: Maybe (String) }) -> AccessKeyDetails
 ```
 
 Constructs AccessKeyDetails's fields from required parameters
@@ -94,7 +94,7 @@ Constructs AccessKeyDetails's fields from required parameters
 
 ``` purescript
 newtype AccountDetail
-  = AccountDetail { "AccountId" :: NullOrUndefined (AccountId), "Email" :: NullOrUndefined (Email) }
+  = AccountDetail { "AccountId" :: Maybe (AccountId), "Email" :: Maybe (Email) }
 ```
 
 An object containing the member's accountId and email address.
@@ -119,7 +119,7 @@ Constructs AccountDetail from required parameters
 #### `newAccountDetail'`
 
 ``` purescript
-newAccountDetail' :: ({ "AccountId" :: NullOrUndefined (AccountId), "Email" :: NullOrUndefined (Email) } -> { "AccountId" :: NullOrUndefined (AccountId), "Email" :: NullOrUndefined (Email) }) -> AccountDetail
+newAccountDetail' :: ({ "AccountId" :: Maybe (AccountId), "Email" :: Maybe (Email) } -> { "AccountId" :: Maybe (AccountId), "Email" :: Maybe (Email) }) -> AccountDetail
 ```
 
 Constructs AccountDetail's fields from required parameters
@@ -182,7 +182,7 @@ Encode AccountIds
 
 ``` purescript
 newtype Action
-  = Action { "ActionType" :: NullOrUndefined (String), "AwsApiCallAction" :: NullOrUndefined (AwsApiCallAction), "DnsRequestAction" :: NullOrUndefined (DnsRequestAction), "NetworkConnectionAction" :: NullOrUndefined (NetworkConnectionAction), "PortProbeAction" :: NullOrUndefined (PortProbeAction) }
+  = Action { "ActionType" :: Maybe (String), "AwsApiCallAction" :: Maybe (AwsApiCallAction), "DnsRequestAction" :: Maybe (DnsRequestAction), "NetworkConnectionAction" :: Maybe (NetworkConnectionAction), "PortProbeAction" :: Maybe (PortProbeAction) }
 ```
 
 Information about the activity described in a finding.
@@ -207,7 +207,7 @@ Constructs Action from required parameters
 #### `newAction'`
 
 ``` purescript
-newAction' :: ({ "ActionType" :: NullOrUndefined (String), "AwsApiCallAction" :: NullOrUndefined (AwsApiCallAction), "DnsRequestAction" :: NullOrUndefined (DnsRequestAction), "NetworkConnectionAction" :: NullOrUndefined (NetworkConnectionAction), "PortProbeAction" :: NullOrUndefined (PortProbeAction) } -> { "ActionType" :: NullOrUndefined (String), "AwsApiCallAction" :: NullOrUndefined (AwsApiCallAction), "DnsRequestAction" :: NullOrUndefined (DnsRequestAction), "NetworkConnectionAction" :: NullOrUndefined (NetworkConnectionAction), "PortProbeAction" :: NullOrUndefined (PortProbeAction) }) -> Action
+newAction' :: ({ "ActionType" :: Maybe (String), "AwsApiCallAction" :: Maybe (AwsApiCallAction), "DnsRequestAction" :: Maybe (DnsRequestAction), "NetworkConnectionAction" :: Maybe (NetworkConnectionAction), "PortProbeAction" :: Maybe (PortProbeAction) } -> { "ActionType" :: Maybe (String), "AwsApiCallAction" :: Maybe (AwsApiCallAction), "DnsRequestAction" :: Maybe (DnsRequestAction), "NetworkConnectionAction" :: Maybe (NetworkConnectionAction), "PortProbeAction" :: Maybe (PortProbeAction) }) -> Action
 ```
 
 Constructs Action's fields from required parameters
@@ -234,7 +234,7 @@ Encode Activate
 
 ``` purescript
 newtype ArchiveFindingsRequest
-  = ArchiveFindingsRequest { "DetectorId" :: String, "FindingIds" :: NullOrUndefined (FindingIds) }
+  = ArchiveFindingsRequest { "DetectorId" :: String, "FindingIds" :: Maybe (FindingIds) }
 ```
 
 ArchiveFindings request body.
@@ -259,7 +259,7 @@ Constructs ArchiveFindingsRequest from required parameters
 #### `newArchiveFindingsRequest'`
 
 ``` purescript
-newArchiveFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingIds" :: NullOrUndefined (FindingIds) } -> { "DetectorId" :: String, "FindingIds" :: NullOrUndefined (FindingIds) }) -> ArchiveFindingsRequest
+newArchiveFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingIds" :: Maybe (FindingIds) } -> { "DetectorId" :: String, "FindingIds" :: Maybe (FindingIds) }) -> ArchiveFindingsRequest
 ```
 
 Constructs ArchiveFindingsRequest's fields from required parameters
@@ -284,7 +284,7 @@ Encode ArchiveFindingsResponse
 
 ``` purescript
 newtype AwsApiCallAction
-  = AwsApiCallAction { "Api" :: NullOrUndefined (String), "CallerType" :: NullOrUndefined (String), "DomainDetails" :: NullOrUndefined (DomainDetails), "RemoteIpDetails" :: NullOrUndefined (RemoteIpDetails), "ServiceName" :: NullOrUndefined (String) }
+  = AwsApiCallAction { "Api" :: Maybe (String), "CallerType" :: Maybe (String), "DomainDetails" :: Maybe (DomainDetails), "RemoteIpDetails" :: Maybe (RemoteIpDetails), "ServiceName" :: Maybe (String) }
 ```
 
 Information about the AWS_API_CALL action described in this finding.
@@ -309,7 +309,7 @@ Constructs AwsApiCallAction from required parameters
 #### `newAwsApiCallAction'`
 
 ``` purescript
-newAwsApiCallAction' :: ({ "Api" :: NullOrUndefined (String), "CallerType" :: NullOrUndefined (String), "DomainDetails" :: NullOrUndefined (DomainDetails), "RemoteIpDetails" :: NullOrUndefined (RemoteIpDetails), "ServiceName" :: NullOrUndefined (String) } -> { "Api" :: NullOrUndefined (String), "CallerType" :: NullOrUndefined (String), "DomainDetails" :: NullOrUndefined (DomainDetails), "RemoteIpDetails" :: NullOrUndefined (RemoteIpDetails), "ServiceName" :: NullOrUndefined (String) }) -> AwsApiCallAction
+newAwsApiCallAction' :: ({ "Api" :: Maybe (String), "CallerType" :: Maybe (String), "DomainDetails" :: Maybe (DomainDetails), "RemoteIpDetails" :: Maybe (RemoteIpDetails), "ServiceName" :: Maybe (String) } -> { "Api" :: Maybe (String), "CallerType" :: Maybe (String), "DomainDetails" :: Maybe (DomainDetails), "RemoteIpDetails" :: Maybe (RemoteIpDetails), "ServiceName" :: Maybe (String) }) -> AwsApiCallAction
 ```
 
 Constructs AwsApiCallAction's fields from required parameters
@@ -318,7 +318,7 @@ Constructs AwsApiCallAction's fields from required parameters
 
 ``` purescript
 newtype BadRequestException
-  = BadRequestException { "Message" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String) }
+  = BadRequestException { "Message" :: Maybe (String), "Type" :: Maybe (String) }
 ```
 
 Error response object.
@@ -343,7 +343,7 @@ Constructs BadRequestException from required parameters
 #### `newBadRequestException'`
 
 ``` purescript
-newBadRequestException' :: ({ "Message" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String) }) -> BadRequestException
+newBadRequestException' :: ({ "Message" :: Maybe (String), "Type" :: Maybe (String) } -> { "Message" :: Maybe (String), "Type" :: Maybe (String) }) -> BadRequestException
 ```
 
 Constructs BadRequestException's fields from required parameters
@@ -352,7 +352,7 @@ Constructs BadRequestException's fields from required parameters
 
 ``` purescript
 newtype City
-  = City { "CityName" :: NullOrUndefined (String) }
+  = City { "CityName" :: Maybe (String) }
 ```
 
 City information of the remote IP address.
@@ -377,7 +377,7 @@ Constructs City from required parameters
 #### `newCity'`
 
 ``` purescript
-newCity' :: ({ "CityName" :: NullOrUndefined (String) } -> { "CityName" :: NullOrUndefined (String) }) -> City
+newCity' :: ({ "CityName" :: Maybe (String) } -> { "CityName" :: Maybe (String) }) -> City
 ```
 
 Constructs City's fields from required parameters
@@ -404,7 +404,7 @@ Encode Comments
 
 ``` purescript
 newtype Condition
-  = Condition { "Eq" :: NullOrUndefined (Eq), "Gt" :: NullOrUndefined (Int), "Gte" :: NullOrUndefined (Int), "Lt" :: NullOrUndefined (Int), "Lte" :: NullOrUndefined (Int), "Neq" :: NullOrUndefined (Neq) }
+  = Condition { "Eq" :: Maybe (Eq), "Gt" :: Maybe (Int), "Gte" :: Maybe (Int), "Lt" :: Maybe (Int), "Lte" :: Maybe (Int), "Neq" :: Maybe (Neq) }
 ```
 
 Finding attribute (for example, accountId) for which conditions and values must be specified when querying findings.
@@ -429,7 +429,7 @@ Constructs Condition from required parameters
 #### `newCondition'`
 
 ``` purescript
-newCondition' :: ({ "Eq" :: NullOrUndefined (Eq), "Gt" :: NullOrUndefined (Int), "Gte" :: NullOrUndefined (Int), "Lt" :: NullOrUndefined (Int), "Lte" :: NullOrUndefined (Int), "Neq" :: NullOrUndefined (Neq) } -> { "Eq" :: NullOrUndefined (Eq), "Gt" :: NullOrUndefined (Int), "Gte" :: NullOrUndefined (Int), "Lt" :: NullOrUndefined (Int), "Lte" :: NullOrUndefined (Int), "Neq" :: NullOrUndefined (Neq) }) -> Condition
+newCondition' :: ({ "Eq" :: Maybe (Eq), "Gt" :: Maybe (Int), "Gte" :: Maybe (Int), "Lt" :: Maybe (Int), "Lte" :: Maybe (Int), "Neq" :: Maybe (Neq) } -> { "Eq" :: Maybe (Eq), "Gt" :: Maybe (Int), "Gte" :: Maybe (Int), "Lt" :: Maybe (Int), "Lte" :: Maybe (Int), "Neq" :: Maybe (Neq) }) -> Condition
 ```
 
 Constructs Condition's fields from required parameters
@@ -456,7 +456,7 @@ Encode CountBySeverityFindingStatistic
 
 ``` purescript
 newtype Country
-  = Country { "CountryCode" :: NullOrUndefined (String), "CountryName" :: NullOrUndefined (String) }
+  = Country { "CountryCode" :: Maybe (String), "CountryName" :: Maybe (String) }
 ```
 
 Country information of the remote IP address.
@@ -481,7 +481,7 @@ Constructs Country from required parameters
 #### `newCountry'`
 
 ``` purescript
-newCountry' :: ({ "CountryCode" :: NullOrUndefined (String), "CountryName" :: NullOrUndefined (String) } -> { "CountryCode" :: NullOrUndefined (String), "CountryName" :: NullOrUndefined (String) }) -> Country
+newCountry' :: ({ "CountryCode" :: Maybe (String), "CountryName" :: Maybe (String) } -> { "CountryCode" :: Maybe (String), "CountryName" :: Maybe (String) }) -> Country
 ```
 
 Constructs Country's fields from required parameters
@@ -490,7 +490,7 @@ Constructs Country's fields from required parameters
 
 ``` purescript
 newtype CreateDetectorRequest
-  = CreateDetectorRequest { "Enable" :: NullOrUndefined (Enable) }
+  = CreateDetectorRequest { "Enable" :: Maybe (Enable) }
 ```
 
 CreateDetector request body.
@@ -515,7 +515,7 @@ Constructs CreateDetectorRequest from required parameters
 #### `newCreateDetectorRequest'`
 
 ``` purescript
-newCreateDetectorRequest' :: ({ "Enable" :: NullOrUndefined (Enable) } -> { "Enable" :: NullOrUndefined (Enable) }) -> CreateDetectorRequest
+newCreateDetectorRequest' :: ({ "Enable" :: Maybe (Enable) } -> { "Enable" :: Maybe (Enable) }) -> CreateDetectorRequest
 ```
 
 Constructs CreateDetectorRequest's fields from required parameters
@@ -524,7 +524,7 @@ Constructs CreateDetectorRequest's fields from required parameters
 
 ``` purescript
 newtype CreateDetectorResponse
-  = CreateDetectorResponse { "DetectorId" :: NullOrUndefined (DetectorId) }
+  = CreateDetectorResponse { "DetectorId" :: Maybe (DetectorId) }
 ```
 
 ##### Instances
@@ -547,7 +547,7 @@ Constructs CreateDetectorResponse from required parameters
 #### `newCreateDetectorResponse'`
 
 ``` purescript
-newCreateDetectorResponse' :: ({ "DetectorId" :: NullOrUndefined (DetectorId) } -> { "DetectorId" :: NullOrUndefined (DetectorId) }) -> CreateDetectorResponse
+newCreateDetectorResponse' :: ({ "DetectorId" :: Maybe (DetectorId) } -> { "DetectorId" :: Maybe (DetectorId) }) -> CreateDetectorResponse
 ```
 
 Constructs CreateDetectorResponse's fields from required parameters
@@ -556,7 +556,7 @@ Constructs CreateDetectorResponse's fields from required parameters
 
 ``` purescript
 newtype CreateIPSetRequest
-  = CreateIPSetRequest { "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "Format" :: NullOrUndefined (IpSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name) }
+  = CreateIPSetRequest { "Activate" :: Maybe (Activate), "DetectorId" :: String, "Format" :: Maybe (IpSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name) }
 ```
 
 CreateIPSet request body.
@@ -581,7 +581,7 @@ Constructs CreateIPSetRequest from required parameters
 #### `newCreateIPSetRequest'`
 
 ``` purescript
-newCreateIPSetRequest' :: String -> ({ "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "Format" :: NullOrUndefined (IpSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name) } -> { "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "Format" :: NullOrUndefined (IpSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name) }) -> CreateIPSetRequest
+newCreateIPSetRequest' :: String -> ({ "Activate" :: Maybe (Activate), "DetectorId" :: String, "Format" :: Maybe (IpSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name) } -> { "Activate" :: Maybe (Activate), "DetectorId" :: String, "Format" :: Maybe (IpSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name) }) -> CreateIPSetRequest
 ```
 
 Constructs CreateIPSetRequest's fields from required parameters
@@ -590,7 +590,7 @@ Constructs CreateIPSetRequest's fields from required parameters
 
 ``` purescript
 newtype CreateIPSetResponse
-  = CreateIPSetResponse { "IpSetId" :: NullOrUndefined (IpSetId) }
+  = CreateIPSetResponse { "IpSetId" :: Maybe (IpSetId) }
 ```
 
 ##### Instances
@@ -613,7 +613,7 @@ Constructs CreateIPSetResponse from required parameters
 #### `newCreateIPSetResponse'`
 
 ``` purescript
-newCreateIPSetResponse' :: ({ "IpSetId" :: NullOrUndefined (IpSetId) } -> { "IpSetId" :: NullOrUndefined (IpSetId) }) -> CreateIPSetResponse
+newCreateIPSetResponse' :: ({ "IpSetId" :: Maybe (IpSetId) } -> { "IpSetId" :: Maybe (IpSetId) }) -> CreateIPSetResponse
 ```
 
 Constructs CreateIPSetResponse's fields from required parameters
@@ -622,7 +622,7 @@ Constructs CreateIPSetResponse's fields from required parameters
 
 ``` purescript
 newtype CreateMembersRequest
-  = CreateMembersRequest { "AccountDetails" :: NullOrUndefined (AccountDetails), "DetectorId" :: String }
+  = CreateMembersRequest { "AccountDetails" :: Maybe (AccountDetails), "DetectorId" :: String }
 ```
 
 CreateMembers request body.
@@ -647,7 +647,7 @@ Constructs CreateMembersRequest from required parameters
 #### `newCreateMembersRequest'`
 
 ``` purescript
-newCreateMembersRequest' :: String -> ({ "AccountDetails" :: NullOrUndefined (AccountDetails), "DetectorId" :: String } -> { "AccountDetails" :: NullOrUndefined (AccountDetails), "DetectorId" :: String }) -> CreateMembersRequest
+newCreateMembersRequest' :: String -> ({ "AccountDetails" :: Maybe (AccountDetails), "DetectorId" :: String } -> { "AccountDetails" :: Maybe (AccountDetails), "DetectorId" :: String }) -> CreateMembersRequest
 ```
 
 Constructs CreateMembersRequest's fields from required parameters
@@ -656,7 +656,7 @@ Constructs CreateMembersRequest's fields from required parameters
 
 ``` purescript
 newtype CreateMembersResponse
-  = CreateMembersResponse { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }
+  = CreateMembersResponse { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }
 ```
 
 ##### Instances
@@ -679,7 +679,7 @@ Constructs CreateMembersResponse from required parameters
 #### `newCreateMembersResponse'`
 
 ``` purescript
-newCreateMembersResponse' :: ({ "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }) -> CreateMembersResponse
+newCreateMembersResponse' :: ({ "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }) -> CreateMembersResponse
 ```
 
 Constructs CreateMembersResponse's fields from required parameters
@@ -688,7 +688,7 @@ Constructs CreateMembersResponse's fields from required parameters
 
 ``` purescript
 newtype CreateSampleFindingsRequest
-  = CreateSampleFindingsRequest { "DetectorId" :: String, "FindingTypes" :: NullOrUndefined (FindingTypes) }
+  = CreateSampleFindingsRequest { "DetectorId" :: String, "FindingTypes" :: Maybe (FindingTypes) }
 ```
 
 CreateSampleFindings request body.
@@ -713,7 +713,7 @@ Constructs CreateSampleFindingsRequest from required parameters
 #### `newCreateSampleFindingsRequest'`
 
 ``` purescript
-newCreateSampleFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingTypes" :: NullOrUndefined (FindingTypes) } -> { "DetectorId" :: String, "FindingTypes" :: NullOrUndefined (FindingTypes) }) -> CreateSampleFindingsRequest
+newCreateSampleFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingTypes" :: Maybe (FindingTypes) } -> { "DetectorId" :: String, "FindingTypes" :: Maybe (FindingTypes) }) -> CreateSampleFindingsRequest
 ```
 
 Constructs CreateSampleFindingsRequest's fields from required parameters
@@ -738,7 +738,7 @@ Encode CreateSampleFindingsResponse
 
 ``` purescript
 newtype CreateThreatIntelSetRequest
-  = CreateThreatIntelSetRequest { "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "Format" :: NullOrUndefined (ThreatIntelSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name) }
+  = CreateThreatIntelSetRequest { "Activate" :: Maybe (Activate), "DetectorId" :: String, "Format" :: Maybe (ThreatIntelSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name) }
 ```
 
 CreateThreatIntelSet request body.
@@ -763,7 +763,7 @@ Constructs CreateThreatIntelSetRequest from required parameters
 #### `newCreateThreatIntelSetRequest'`
 
 ``` purescript
-newCreateThreatIntelSetRequest' :: String -> ({ "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "Format" :: NullOrUndefined (ThreatIntelSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name) } -> { "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "Format" :: NullOrUndefined (ThreatIntelSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name) }) -> CreateThreatIntelSetRequest
+newCreateThreatIntelSetRequest' :: String -> ({ "Activate" :: Maybe (Activate), "DetectorId" :: String, "Format" :: Maybe (ThreatIntelSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name) } -> { "Activate" :: Maybe (Activate), "DetectorId" :: String, "Format" :: Maybe (ThreatIntelSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name) }) -> CreateThreatIntelSetRequest
 ```
 
 Constructs CreateThreatIntelSetRequest's fields from required parameters
@@ -772,7 +772,7 @@ Constructs CreateThreatIntelSetRequest's fields from required parameters
 
 ``` purescript
 newtype CreateThreatIntelSetResponse
-  = CreateThreatIntelSetResponse { "ThreatIntelSetId" :: NullOrUndefined (ThreatIntelSetId) }
+  = CreateThreatIntelSetResponse { "ThreatIntelSetId" :: Maybe (ThreatIntelSetId) }
 ```
 
 ##### Instances
@@ -795,7 +795,7 @@ Constructs CreateThreatIntelSetResponse from required parameters
 #### `newCreateThreatIntelSetResponse'`
 
 ``` purescript
-newCreateThreatIntelSetResponse' :: ({ "ThreatIntelSetId" :: NullOrUndefined (ThreatIntelSetId) } -> { "ThreatIntelSetId" :: NullOrUndefined (ThreatIntelSetId) }) -> CreateThreatIntelSetResponse
+newCreateThreatIntelSetResponse' :: ({ "ThreatIntelSetId" :: Maybe (ThreatIntelSetId) } -> { "ThreatIntelSetId" :: Maybe (ThreatIntelSetId) }) -> CreateThreatIntelSetResponse
 ```
 
 Constructs CreateThreatIntelSetResponse's fields from required parameters
@@ -822,7 +822,7 @@ Encode CreatedAt
 
 ``` purescript
 newtype DeclineInvitationsRequest
-  = DeclineInvitationsRequest { "AccountIds" :: NullOrUndefined (AccountIds) }
+  = DeclineInvitationsRequest { "AccountIds" :: Maybe (AccountIds) }
 ```
 
 DeclineInvitations request body.
@@ -847,7 +847,7 @@ Constructs DeclineInvitationsRequest from required parameters
 #### `newDeclineInvitationsRequest'`
 
 ``` purescript
-newDeclineInvitationsRequest' :: ({ "AccountIds" :: NullOrUndefined (AccountIds) } -> { "AccountIds" :: NullOrUndefined (AccountIds) }) -> DeclineInvitationsRequest
+newDeclineInvitationsRequest' :: ({ "AccountIds" :: Maybe (AccountIds) } -> { "AccountIds" :: Maybe (AccountIds) }) -> DeclineInvitationsRequest
 ```
 
 Constructs DeclineInvitationsRequest's fields from required parameters
@@ -856,7 +856,7 @@ Constructs DeclineInvitationsRequest's fields from required parameters
 
 ``` purescript
 newtype DeclineInvitationsResponse
-  = DeclineInvitationsResponse { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }
+  = DeclineInvitationsResponse { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }
 ```
 
 ##### Instances
@@ -879,7 +879,7 @@ Constructs DeclineInvitationsResponse from required parameters
 #### `newDeclineInvitationsResponse'`
 
 ``` purescript
-newDeclineInvitationsResponse' :: ({ "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }) -> DeclineInvitationsResponse
+newDeclineInvitationsResponse' :: ({ "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }) -> DeclineInvitationsResponse
 ```
 
 Constructs DeclineInvitationsResponse's fields from required parameters
@@ -984,7 +984,7 @@ Encode DeleteIPSetResponse
 
 ``` purescript
 newtype DeleteInvitationsRequest
-  = DeleteInvitationsRequest { "AccountIds" :: NullOrUndefined (AccountIds) }
+  = DeleteInvitationsRequest { "AccountIds" :: Maybe (AccountIds) }
 ```
 
 DeleteInvitations request body.
@@ -1009,7 +1009,7 @@ Constructs DeleteInvitationsRequest from required parameters
 #### `newDeleteInvitationsRequest'`
 
 ``` purescript
-newDeleteInvitationsRequest' :: ({ "AccountIds" :: NullOrUndefined (AccountIds) } -> { "AccountIds" :: NullOrUndefined (AccountIds) }) -> DeleteInvitationsRequest
+newDeleteInvitationsRequest' :: ({ "AccountIds" :: Maybe (AccountIds) } -> { "AccountIds" :: Maybe (AccountIds) }) -> DeleteInvitationsRequest
 ```
 
 Constructs DeleteInvitationsRequest's fields from required parameters
@@ -1018,7 +1018,7 @@ Constructs DeleteInvitationsRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteInvitationsResponse
-  = DeleteInvitationsResponse { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }
+  = DeleteInvitationsResponse { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }
 ```
 
 ##### Instances
@@ -1041,7 +1041,7 @@ Constructs DeleteInvitationsResponse from required parameters
 #### `newDeleteInvitationsResponse'`
 
 ``` purescript
-newDeleteInvitationsResponse' :: ({ "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }) -> DeleteInvitationsResponse
+newDeleteInvitationsResponse' :: ({ "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }) -> DeleteInvitationsResponse
 ```
 
 Constructs DeleteInvitationsResponse's fields from required parameters
@@ -1050,7 +1050,7 @@ Constructs DeleteInvitationsResponse's fields from required parameters
 
 ``` purescript
 newtype DeleteMembersRequest
-  = DeleteMembersRequest { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }
+  = DeleteMembersRequest { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }
 ```
 
 DeleteMembers request body.
@@ -1075,7 +1075,7 @@ Constructs DeleteMembersRequest from required parameters
 #### `newDeleteMembersRequest'`
 
 ``` purescript
-newDeleteMembersRequest' :: String -> ({ "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }) -> DeleteMembersRequest
+newDeleteMembersRequest' :: String -> ({ "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }) -> DeleteMembersRequest
 ```
 
 Constructs DeleteMembersRequest's fields from required parameters
@@ -1084,7 +1084,7 @@ Constructs DeleteMembersRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteMembersResponse
-  = DeleteMembersResponse { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }
+  = DeleteMembersResponse { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }
 ```
 
 ##### Instances
@@ -1107,7 +1107,7 @@ Constructs DeleteMembersResponse from required parameters
 #### `newDeleteMembersResponse'`
 
 ``` purescript
-newDeleteMembersResponse' :: ({ "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }) -> DeleteMembersResponse
+newDeleteMembersResponse' :: ({ "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }) -> DeleteMembersResponse
 ```
 
 Constructs DeleteMembersResponse's fields from required parameters
@@ -1266,7 +1266,7 @@ Encode DisassociateFromMasterAccountResponse
 
 ``` purescript
 newtype DisassociateMembersRequest
-  = DisassociateMembersRequest { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }
+  = DisassociateMembersRequest { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }
 ```
 
 DisassociateMembers request body.
@@ -1291,7 +1291,7 @@ Constructs DisassociateMembersRequest from required parameters
 #### `newDisassociateMembersRequest'`
 
 ``` purescript
-newDisassociateMembersRequest' :: String -> ({ "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }) -> DisassociateMembersRequest
+newDisassociateMembersRequest' :: String -> ({ "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }) -> DisassociateMembersRequest
 ```
 
 Constructs DisassociateMembersRequest's fields from required parameters
@@ -1300,7 +1300,7 @@ Constructs DisassociateMembersRequest's fields from required parameters
 
 ``` purescript
 newtype DisassociateMembersResponse
-  = DisassociateMembersResponse { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }
+  = DisassociateMembersResponse { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }
 ```
 
 ##### Instances
@@ -1323,7 +1323,7 @@ Constructs DisassociateMembersResponse from required parameters
 #### `newDisassociateMembersResponse'`
 
 ``` purescript
-newDisassociateMembersResponse' :: ({ "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }) -> DisassociateMembersResponse
+newDisassociateMembersResponse' :: ({ "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }) -> DisassociateMembersResponse
 ```
 
 Constructs DisassociateMembersResponse's fields from required parameters
@@ -1332,7 +1332,7 @@ Constructs DisassociateMembersResponse's fields from required parameters
 
 ``` purescript
 newtype DnsRequestAction
-  = DnsRequestAction { "Domain" :: NullOrUndefined (Domain) }
+  = DnsRequestAction { "Domain" :: Maybe (Domain) }
 ```
 
 Information about the DNS_REQUEST action described in this finding.
@@ -1357,7 +1357,7 @@ Constructs DnsRequestAction from required parameters
 #### `newDnsRequestAction'`
 
 ``` purescript
-newDnsRequestAction' :: ({ "Domain" :: NullOrUndefined (Domain) } -> { "Domain" :: NullOrUndefined (Domain) }) -> DnsRequestAction
+newDnsRequestAction' :: ({ "Domain" :: Maybe (Domain) } -> { "Domain" :: Maybe (Domain) }) -> DnsRequestAction
 ```
 
 Constructs DnsRequestAction's fields from required parameters
@@ -1456,7 +1456,7 @@ Encode Eq
 
 ``` purescript
 newtype ErrorResponse
-  = ErrorResponse { "Message" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String) }
+  = ErrorResponse { "Message" :: Maybe (String), "Type" :: Maybe (String) }
 ```
 
 Error response object.
@@ -1481,7 +1481,7 @@ Constructs ErrorResponse from required parameters
 #### `newErrorResponse'`
 
 ``` purescript
-newErrorResponse' :: ({ "Message" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String) }) -> ErrorResponse
+newErrorResponse' :: ({ "Message" :: Maybe (String), "Type" :: Maybe (String) } -> { "Message" :: Maybe (String), "Type" :: Maybe (String) }) -> ErrorResponse
 ```
 
 Constructs ErrorResponse's fields from required parameters
@@ -1508,7 +1508,7 @@ Encode Feedback
 
 ``` purescript
 newtype Finding
-  = Finding { "AccountId" :: NullOrUndefined (String), "Arn" :: NullOrUndefined (String), "Confidence" :: NullOrUndefined (Number), "CreatedAt" :: NullOrUndefined (CreatedAt), "Description" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Partition" :: NullOrUndefined (String), "Region" :: NullOrUndefined (String), "Resource" :: NullOrUndefined (Resource), "SchemaVersion" :: NullOrUndefined (String), "Service" :: NullOrUndefined (Service), "Severity" :: NullOrUndefined (Number), "Title" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String), "UpdatedAt" :: NullOrUndefined (UpdatedAt) }
+  = Finding { "AccountId" :: Maybe (String), "Arn" :: Maybe (String), "Confidence" :: Maybe (Number), "CreatedAt" :: Maybe (CreatedAt), "Description" :: Maybe (String), "Id" :: Maybe (String), "Partition" :: Maybe (String), "Region" :: Maybe (String), "Resource" :: Maybe (Resource), "SchemaVersion" :: Maybe (String), "Service" :: Maybe (Service), "Severity" :: Maybe (Number), "Title" :: Maybe (String), "Type" :: Maybe (String), "UpdatedAt" :: Maybe (UpdatedAt) }
 ```
 
 Representation of a abnormal or suspicious activity.
@@ -1533,7 +1533,7 @@ Constructs Finding from required parameters
 #### `newFinding'`
 
 ``` purescript
-newFinding' :: ({ "AccountId" :: NullOrUndefined (String), "Arn" :: NullOrUndefined (String), "Confidence" :: NullOrUndefined (Number), "CreatedAt" :: NullOrUndefined (CreatedAt), "Description" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Partition" :: NullOrUndefined (String), "Region" :: NullOrUndefined (String), "Resource" :: NullOrUndefined (Resource), "SchemaVersion" :: NullOrUndefined (String), "Service" :: NullOrUndefined (Service), "Severity" :: NullOrUndefined (Number), "Title" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String), "UpdatedAt" :: NullOrUndefined (UpdatedAt) } -> { "AccountId" :: NullOrUndefined (String), "Arn" :: NullOrUndefined (String), "Confidence" :: NullOrUndefined (Number), "CreatedAt" :: NullOrUndefined (CreatedAt), "Description" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Partition" :: NullOrUndefined (String), "Region" :: NullOrUndefined (String), "Resource" :: NullOrUndefined (Resource), "SchemaVersion" :: NullOrUndefined (String), "Service" :: NullOrUndefined (Service), "Severity" :: NullOrUndefined (Number), "Title" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String), "UpdatedAt" :: NullOrUndefined (UpdatedAt) }) -> Finding
+newFinding' :: ({ "AccountId" :: Maybe (String), "Arn" :: Maybe (String), "Confidence" :: Maybe (Number), "CreatedAt" :: Maybe (CreatedAt), "Description" :: Maybe (String), "Id" :: Maybe (String), "Partition" :: Maybe (String), "Region" :: Maybe (String), "Resource" :: Maybe (Resource), "SchemaVersion" :: Maybe (String), "Service" :: Maybe (Service), "Severity" :: Maybe (Number), "Title" :: Maybe (String), "Type" :: Maybe (String), "UpdatedAt" :: Maybe (UpdatedAt) } -> { "AccountId" :: Maybe (String), "Arn" :: Maybe (String), "Confidence" :: Maybe (Number), "CreatedAt" :: Maybe (CreatedAt), "Description" :: Maybe (String), "Id" :: Maybe (String), "Partition" :: Maybe (String), "Region" :: Maybe (String), "Resource" :: Maybe (Resource), "SchemaVersion" :: Maybe (String), "Service" :: Maybe (Service), "Severity" :: Maybe (Number), "Title" :: Maybe (String), "Type" :: Maybe (String), "UpdatedAt" :: Maybe (UpdatedAt) }) -> Finding
 ```
 
 Constructs Finding's fields from required parameters
@@ -1542,7 +1542,7 @@ Constructs Finding's fields from required parameters
 
 ``` purescript
 newtype FindingCriteria
-  = FindingCriteria { "Criterion" :: NullOrUndefined (MapOfCondition) }
+  = FindingCriteria { "Criterion" :: Maybe (MapOfCondition) }
 ```
 
 Represents the criteria used for querying findings.
@@ -1567,7 +1567,7 @@ Constructs FindingCriteria from required parameters
 #### `newFindingCriteria'`
 
 ``` purescript
-newFindingCriteria' :: ({ "Criterion" :: NullOrUndefined (MapOfCondition) } -> { "Criterion" :: NullOrUndefined (MapOfCondition) }) -> FindingCriteria
+newFindingCriteria' :: ({ "Criterion" :: Maybe (MapOfCondition) } -> { "Criterion" :: Maybe (MapOfCondition) }) -> FindingCriteria
 ```
 
 Constructs FindingCriteria's fields from required parameters
@@ -1648,7 +1648,7 @@ Encode FindingStatisticTypes
 
 ``` purescript
 newtype FindingStatistics
-  = FindingStatistics { "CountBySeverity" :: NullOrUndefined (MapOfCountBySeverityFindingStatistic) }
+  = FindingStatistics { "CountBySeverity" :: Maybe (MapOfCountBySeverityFindingStatistic) }
 ```
 
 Finding statistics object.
@@ -1673,7 +1673,7 @@ Constructs FindingStatistics from required parameters
 #### `newFindingStatistics'`
 
 ``` purescript
-newFindingStatistics' :: ({ "CountBySeverity" :: NullOrUndefined (MapOfCountBySeverityFindingStatistic) } -> { "CountBySeverity" :: NullOrUndefined (MapOfCountBySeverityFindingStatistic) }) -> FindingStatistics
+newFindingStatistics' :: ({ "CountBySeverity" :: Maybe (MapOfCountBySeverityFindingStatistic) } -> { "CountBySeverity" :: Maybe (MapOfCountBySeverityFindingStatistic) }) -> FindingStatistics
 ```
 
 Constructs FindingStatistics's fields from required parameters
@@ -1736,7 +1736,7 @@ Encode Findings
 
 ``` purescript
 newtype GeoLocation
-  = GeoLocation { "Lat" :: NullOrUndefined (Number), "Lon" :: NullOrUndefined (Number) }
+  = GeoLocation { "Lat" :: Maybe (Number), "Lon" :: Maybe (Number) }
 ```
 
 Location information of the remote IP address.
@@ -1761,7 +1761,7 @@ Constructs GeoLocation from required parameters
 #### `newGeoLocation'`
 
 ``` purescript
-newGeoLocation' :: ({ "Lat" :: NullOrUndefined (Number), "Lon" :: NullOrUndefined (Number) } -> { "Lat" :: NullOrUndefined (Number), "Lon" :: NullOrUndefined (Number) }) -> GeoLocation
+newGeoLocation' :: ({ "Lat" :: Maybe (Number), "Lon" :: Maybe (Number) } -> { "Lat" :: Maybe (Number), "Lon" :: Maybe (Number) }) -> GeoLocation
 ```
 
 Constructs GeoLocation's fields from required parameters
@@ -1802,7 +1802,7 @@ Constructs GetDetectorRequest's fields from required parameters
 
 ``` purescript
 newtype GetDetectorResponse
-  = GetDetectorResponse { "CreatedAt" :: NullOrUndefined (CreatedAt), "ServiceRole" :: NullOrUndefined (ServiceRole), "Status" :: NullOrUndefined (DetectorStatus), "UpdatedAt" :: NullOrUndefined (UpdatedAt) }
+  = GetDetectorResponse { "CreatedAt" :: Maybe (CreatedAt), "ServiceRole" :: Maybe (ServiceRole), "Status" :: Maybe (DetectorStatus), "UpdatedAt" :: Maybe (UpdatedAt) }
 ```
 
 ##### Instances
@@ -1825,7 +1825,7 @@ Constructs GetDetectorResponse from required parameters
 #### `newGetDetectorResponse'`
 
 ``` purescript
-newGetDetectorResponse' :: ({ "CreatedAt" :: NullOrUndefined (CreatedAt), "ServiceRole" :: NullOrUndefined (ServiceRole), "Status" :: NullOrUndefined (DetectorStatus), "UpdatedAt" :: NullOrUndefined (UpdatedAt) } -> { "CreatedAt" :: NullOrUndefined (CreatedAt), "ServiceRole" :: NullOrUndefined (ServiceRole), "Status" :: NullOrUndefined (DetectorStatus), "UpdatedAt" :: NullOrUndefined (UpdatedAt) }) -> GetDetectorResponse
+newGetDetectorResponse' :: ({ "CreatedAt" :: Maybe (CreatedAt), "ServiceRole" :: Maybe (ServiceRole), "Status" :: Maybe (DetectorStatus), "UpdatedAt" :: Maybe (UpdatedAt) } -> { "CreatedAt" :: Maybe (CreatedAt), "ServiceRole" :: Maybe (ServiceRole), "Status" :: Maybe (DetectorStatus), "UpdatedAt" :: Maybe (UpdatedAt) }) -> GetDetectorResponse
 ```
 
 Constructs GetDetectorResponse's fields from required parameters
@@ -1834,7 +1834,7 @@ Constructs GetDetectorResponse's fields from required parameters
 
 ``` purescript
 newtype GetFindingsRequest
-  = GetFindingsRequest { "DetectorId" :: String, "FindingIds" :: NullOrUndefined (FindingIds), "SortCriteria" :: NullOrUndefined (SortCriteria) }
+  = GetFindingsRequest { "DetectorId" :: String, "FindingIds" :: Maybe (FindingIds), "SortCriteria" :: Maybe (SortCriteria) }
 ```
 
 GetFindings request body.
@@ -1859,7 +1859,7 @@ Constructs GetFindingsRequest from required parameters
 #### `newGetFindingsRequest'`
 
 ``` purescript
-newGetFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingIds" :: NullOrUndefined (FindingIds), "SortCriteria" :: NullOrUndefined (SortCriteria) } -> { "DetectorId" :: String, "FindingIds" :: NullOrUndefined (FindingIds), "SortCriteria" :: NullOrUndefined (SortCriteria) }) -> GetFindingsRequest
+newGetFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingIds" :: Maybe (FindingIds), "SortCriteria" :: Maybe (SortCriteria) } -> { "DetectorId" :: String, "FindingIds" :: Maybe (FindingIds), "SortCriteria" :: Maybe (SortCriteria) }) -> GetFindingsRequest
 ```
 
 Constructs GetFindingsRequest's fields from required parameters
@@ -1868,7 +1868,7 @@ Constructs GetFindingsRequest's fields from required parameters
 
 ``` purescript
 newtype GetFindingsResponse
-  = GetFindingsResponse { "Findings" :: NullOrUndefined (Findings) }
+  = GetFindingsResponse { "Findings" :: Maybe (Findings) }
 ```
 
 ##### Instances
@@ -1891,7 +1891,7 @@ Constructs GetFindingsResponse from required parameters
 #### `newGetFindingsResponse'`
 
 ``` purescript
-newGetFindingsResponse' :: ({ "Findings" :: NullOrUndefined (Findings) } -> { "Findings" :: NullOrUndefined (Findings) }) -> GetFindingsResponse
+newGetFindingsResponse' :: ({ "Findings" :: Maybe (Findings) } -> { "Findings" :: Maybe (Findings) }) -> GetFindingsResponse
 ```
 
 Constructs GetFindingsResponse's fields from required parameters
@@ -1900,7 +1900,7 @@ Constructs GetFindingsResponse's fields from required parameters
 
 ``` purescript
 newtype GetFindingsStatisticsRequest
-  = GetFindingsStatisticsRequest { "DetectorId" :: String, "FindingCriteria" :: NullOrUndefined (FindingCriteria), "FindingStatisticTypes" :: NullOrUndefined (FindingStatisticTypes) }
+  = GetFindingsStatisticsRequest { "DetectorId" :: String, "FindingCriteria" :: Maybe (FindingCriteria), "FindingStatisticTypes" :: Maybe (FindingStatisticTypes) }
 ```
 
 GetFindingsStatistics request body.
@@ -1925,7 +1925,7 @@ Constructs GetFindingsStatisticsRequest from required parameters
 #### `newGetFindingsStatisticsRequest'`
 
 ``` purescript
-newGetFindingsStatisticsRequest' :: String -> ({ "DetectorId" :: String, "FindingCriteria" :: NullOrUndefined (FindingCriteria), "FindingStatisticTypes" :: NullOrUndefined (FindingStatisticTypes) } -> { "DetectorId" :: String, "FindingCriteria" :: NullOrUndefined (FindingCriteria), "FindingStatisticTypes" :: NullOrUndefined (FindingStatisticTypes) }) -> GetFindingsStatisticsRequest
+newGetFindingsStatisticsRequest' :: String -> ({ "DetectorId" :: String, "FindingCriteria" :: Maybe (FindingCriteria), "FindingStatisticTypes" :: Maybe (FindingStatisticTypes) } -> { "DetectorId" :: String, "FindingCriteria" :: Maybe (FindingCriteria), "FindingStatisticTypes" :: Maybe (FindingStatisticTypes) }) -> GetFindingsStatisticsRequest
 ```
 
 Constructs GetFindingsStatisticsRequest's fields from required parameters
@@ -1934,7 +1934,7 @@ Constructs GetFindingsStatisticsRequest's fields from required parameters
 
 ``` purescript
 newtype GetFindingsStatisticsResponse
-  = GetFindingsStatisticsResponse { "FindingStatistics" :: NullOrUndefined (FindingStatistics) }
+  = GetFindingsStatisticsResponse { "FindingStatistics" :: Maybe (FindingStatistics) }
 ```
 
 ##### Instances
@@ -1957,7 +1957,7 @@ Constructs GetFindingsStatisticsResponse from required parameters
 #### `newGetFindingsStatisticsResponse'`
 
 ``` purescript
-newGetFindingsStatisticsResponse' :: ({ "FindingStatistics" :: NullOrUndefined (FindingStatistics) } -> { "FindingStatistics" :: NullOrUndefined (FindingStatistics) }) -> GetFindingsStatisticsResponse
+newGetFindingsStatisticsResponse' :: ({ "FindingStatistics" :: Maybe (FindingStatistics) } -> { "FindingStatistics" :: Maybe (FindingStatistics) }) -> GetFindingsStatisticsResponse
 ```
 
 Constructs GetFindingsStatisticsResponse's fields from required parameters
@@ -1998,7 +1998,7 @@ Constructs GetIPSetRequest's fields from required parameters
 
 ``` purescript
 newtype GetIPSetResponse
-  = GetIPSetResponse { "Format" :: NullOrUndefined (IpSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name), "Status" :: NullOrUndefined (IpSetStatus) }
+  = GetIPSetResponse { "Format" :: Maybe (IpSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name), "Status" :: Maybe (IpSetStatus) }
 ```
 
 ##### Instances
@@ -2021,7 +2021,7 @@ Constructs GetIPSetResponse from required parameters
 #### `newGetIPSetResponse'`
 
 ``` purescript
-newGetIPSetResponse' :: ({ "Format" :: NullOrUndefined (IpSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name), "Status" :: NullOrUndefined (IpSetStatus) } -> { "Format" :: NullOrUndefined (IpSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name), "Status" :: NullOrUndefined (IpSetStatus) }) -> GetIPSetResponse
+newGetIPSetResponse' :: ({ "Format" :: Maybe (IpSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name), "Status" :: Maybe (IpSetStatus) } -> { "Format" :: Maybe (IpSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name), "Status" :: Maybe (IpSetStatus) }) -> GetIPSetResponse
 ```
 
 Constructs GetIPSetResponse's fields from required parameters
@@ -2046,7 +2046,7 @@ Encode GetInvitationsCountRequest
 
 ``` purescript
 newtype GetInvitationsCountResponse
-  = GetInvitationsCountResponse { "InvitationsCount" :: NullOrUndefined (Int) }
+  = GetInvitationsCountResponse { "InvitationsCount" :: Maybe (Int) }
 ```
 
 ##### Instances
@@ -2069,7 +2069,7 @@ Constructs GetInvitationsCountResponse from required parameters
 #### `newGetInvitationsCountResponse'`
 
 ``` purescript
-newGetInvitationsCountResponse' :: ({ "InvitationsCount" :: NullOrUndefined (Int) } -> { "InvitationsCount" :: NullOrUndefined (Int) }) -> GetInvitationsCountResponse
+newGetInvitationsCountResponse' :: ({ "InvitationsCount" :: Maybe (Int) } -> { "InvitationsCount" :: Maybe (Int) }) -> GetInvitationsCountResponse
 ```
 
 Constructs GetInvitationsCountResponse's fields from required parameters
@@ -2110,7 +2110,7 @@ Constructs GetMasterAccountRequest's fields from required parameters
 
 ``` purescript
 newtype GetMasterAccountResponse
-  = GetMasterAccountResponse { "Master" :: NullOrUndefined (Master) }
+  = GetMasterAccountResponse { "Master" :: Maybe (Master) }
 ```
 
 ##### Instances
@@ -2133,7 +2133,7 @@ Constructs GetMasterAccountResponse from required parameters
 #### `newGetMasterAccountResponse'`
 
 ``` purescript
-newGetMasterAccountResponse' :: ({ "Master" :: NullOrUndefined (Master) } -> { "Master" :: NullOrUndefined (Master) }) -> GetMasterAccountResponse
+newGetMasterAccountResponse' :: ({ "Master" :: Maybe (Master) } -> { "Master" :: Maybe (Master) }) -> GetMasterAccountResponse
 ```
 
 Constructs GetMasterAccountResponse's fields from required parameters
@@ -2142,7 +2142,7 @@ Constructs GetMasterAccountResponse's fields from required parameters
 
 ``` purescript
 newtype GetMembersRequest
-  = GetMembersRequest { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }
+  = GetMembersRequest { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }
 ```
 
 GetMembers request body.
@@ -2167,7 +2167,7 @@ Constructs GetMembersRequest from required parameters
 #### `newGetMembersRequest'`
 
 ``` purescript
-newGetMembersRequest' :: String -> ({ "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }) -> GetMembersRequest
+newGetMembersRequest' :: String -> ({ "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }) -> GetMembersRequest
 ```
 
 Constructs GetMembersRequest's fields from required parameters
@@ -2176,7 +2176,7 @@ Constructs GetMembersRequest's fields from required parameters
 
 ``` purescript
 newtype GetMembersResponse
-  = GetMembersResponse { "Members" :: NullOrUndefined (Members), "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }
+  = GetMembersResponse { "Members" :: Maybe (Members), "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }
 ```
 
 ##### Instances
@@ -2199,7 +2199,7 @@ Constructs GetMembersResponse from required parameters
 #### `newGetMembersResponse'`
 
 ``` purescript
-newGetMembersResponse' :: ({ "Members" :: NullOrUndefined (Members), "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) } -> { "Members" :: NullOrUndefined (Members), "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }) -> GetMembersResponse
+newGetMembersResponse' :: ({ "Members" :: Maybe (Members), "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) } -> { "Members" :: Maybe (Members), "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }) -> GetMembersResponse
 ```
 
 Constructs GetMembersResponse's fields from required parameters
@@ -2240,7 +2240,7 @@ Constructs GetThreatIntelSetRequest's fields from required parameters
 
 ``` purescript
 newtype GetThreatIntelSetResponse
-  = GetThreatIntelSetResponse { "Format" :: NullOrUndefined (ThreatIntelSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name), "Status" :: NullOrUndefined (ThreatIntelSetStatus) }
+  = GetThreatIntelSetResponse { "Format" :: Maybe (ThreatIntelSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name), "Status" :: Maybe (ThreatIntelSetStatus) }
 ```
 
 ##### Instances
@@ -2263,7 +2263,7 @@ Constructs GetThreatIntelSetResponse from required parameters
 #### `newGetThreatIntelSetResponse'`
 
 ``` purescript
-newGetThreatIntelSetResponse' :: ({ "Format" :: NullOrUndefined (ThreatIntelSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name), "Status" :: NullOrUndefined (ThreatIntelSetStatus) } -> { "Format" :: NullOrUndefined (ThreatIntelSetFormat), "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name), "Status" :: NullOrUndefined (ThreatIntelSetStatus) }) -> GetThreatIntelSetResponse
+newGetThreatIntelSetResponse' :: ({ "Format" :: Maybe (ThreatIntelSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name), "Status" :: Maybe (ThreatIntelSetStatus) } -> { "Format" :: Maybe (ThreatIntelSetFormat), "Location" :: Maybe (Location), "Name" :: Maybe (Name), "Status" :: Maybe (ThreatIntelSetStatus) }) -> GetThreatIntelSetResponse
 ```
 
 Constructs GetThreatIntelSetResponse's fields from required parameters
@@ -2272,7 +2272,7 @@ Constructs GetThreatIntelSetResponse's fields from required parameters
 
 ``` purescript
 newtype IamInstanceProfile
-  = IamInstanceProfile { "Arn" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String) }
+  = IamInstanceProfile { "Arn" :: Maybe (String), "Id" :: Maybe (String) }
 ```
 
 The profile information of the EC2 instance.
@@ -2297,7 +2297,7 @@ Constructs IamInstanceProfile from required parameters
 #### `newIamInstanceProfile'`
 
 ``` purescript
-newIamInstanceProfile' :: ({ "Arn" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String) } -> { "Arn" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String) }) -> IamInstanceProfile
+newIamInstanceProfile' :: ({ "Arn" :: Maybe (String), "Id" :: Maybe (String) } -> { "Arn" :: Maybe (String), "Id" :: Maybe (String) }) -> IamInstanceProfile
 ```
 
 Constructs IamInstanceProfile's fields from required parameters
@@ -2306,7 +2306,7 @@ Constructs IamInstanceProfile's fields from required parameters
 
 ``` purescript
 newtype InstanceDetails
-  = InstanceDetails { "AvailabilityZone" :: NullOrUndefined (String), "IamInstanceProfile" :: NullOrUndefined (IamInstanceProfile), "ImageId" :: NullOrUndefined (String), "InstanceId" :: NullOrUndefined (String), "InstanceState" :: NullOrUndefined (String), "InstanceType" :: NullOrUndefined (String), "LaunchTime" :: NullOrUndefined (String), "NetworkInterfaces" :: NullOrUndefined (NetworkInterfaces), "Platform" :: NullOrUndefined (String), "ProductCodes" :: NullOrUndefined (ProductCodes), "Tags" :: NullOrUndefined (Tags) }
+  = InstanceDetails { "AvailabilityZone" :: Maybe (String), "IamInstanceProfile" :: Maybe (IamInstanceProfile), "ImageId" :: Maybe (String), "InstanceId" :: Maybe (String), "InstanceState" :: Maybe (String), "InstanceType" :: Maybe (String), "LaunchTime" :: Maybe (String), "NetworkInterfaces" :: Maybe (NetworkInterfaces), "Platform" :: Maybe (String), "ProductCodes" :: Maybe (ProductCodes), "Tags" :: Maybe (Tags) }
 ```
 
 The information about the EC2 instance associated with the activity that prompted GuardDuty to generate a finding.
@@ -2331,7 +2331,7 @@ Constructs InstanceDetails from required parameters
 #### `newInstanceDetails'`
 
 ``` purescript
-newInstanceDetails' :: ({ "AvailabilityZone" :: NullOrUndefined (String), "IamInstanceProfile" :: NullOrUndefined (IamInstanceProfile), "ImageId" :: NullOrUndefined (String), "InstanceId" :: NullOrUndefined (String), "InstanceState" :: NullOrUndefined (String), "InstanceType" :: NullOrUndefined (String), "LaunchTime" :: NullOrUndefined (String), "NetworkInterfaces" :: NullOrUndefined (NetworkInterfaces), "Platform" :: NullOrUndefined (String), "ProductCodes" :: NullOrUndefined (ProductCodes), "Tags" :: NullOrUndefined (Tags) } -> { "AvailabilityZone" :: NullOrUndefined (String), "IamInstanceProfile" :: NullOrUndefined (IamInstanceProfile), "ImageId" :: NullOrUndefined (String), "InstanceId" :: NullOrUndefined (String), "InstanceState" :: NullOrUndefined (String), "InstanceType" :: NullOrUndefined (String), "LaunchTime" :: NullOrUndefined (String), "NetworkInterfaces" :: NullOrUndefined (NetworkInterfaces), "Platform" :: NullOrUndefined (String), "ProductCodes" :: NullOrUndefined (ProductCodes), "Tags" :: NullOrUndefined (Tags) }) -> InstanceDetails
+newInstanceDetails' :: ({ "AvailabilityZone" :: Maybe (String), "IamInstanceProfile" :: Maybe (IamInstanceProfile), "ImageId" :: Maybe (String), "InstanceId" :: Maybe (String), "InstanceState" :: Maybe (String), "InstanceType" :: Maybe (String), "LaunchTime" :: Maybe (String), "NetworkInterfaces" :: Maybe (NetworkInterfaces), "Platform" :: Maybe (String), "ProductCodes" :: Maybe (ProductCodes), "Tags" :: Maybe (Tags) } -> { "AvailabilityZone" :: Maybe (String), "IamInstanceProfile" :: Maybe (IamInstanceProfile), "ImageId" :: Maybe (String), "InstanceId" :: Maybe (String), "InstanceState" :: Maybe (String), "InstanceType" :: Maybe (String), "LaunchTime" :: Maybe (String), "NetworkInterfaces" :: Maybe (NetworkInterfaces), "Platform" :: Maybe (String), "ProductCodes" :: Maybe (ProductCodes), "Tags" :: Maybe (Tags) }) -> InstanceDetails
 ```
 
 Constructs InstanceDetails's fields from required parameters
@@ -2340,7 +2340,7 @@ Constructs InstanceDetails's fields from required parameters
 
 ``` purescript
 newtype InternalServerErrorException
-  = InternalServerErrorException { "Message" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String) }
+  = InternalServerErrorException { "Message" :: Maybe (String), "Type" :: Maybe (String) }
 ```
 
 Error response object.
@@ -2365,7 +2365,7 @@ Constructs InternalServerErrorException from required parameters
 #### `newInternalServerErrorException'`
 
 ``` purescript
-newInternalServerErrorException' :: ({ "Message" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "Type" :: NullOrUndefined (String) }) -> InternalServerErrorException
+newInternalServerErrorException' :: ({ "Message" :: Maybe (String), "Type" :: Maybe (String) } -> { "Message" :: Maybe (String), "Type" :: Maybe (String) }) -> InternalServerErrorException
 ```
 
 Constructs InternalServerErrorException's fields from required parameters
@@ -2374,7 +2374,7 @@ Constructs InternalServerErrorException's fields from required parameters
 
 ``` purescript
 newtype Invitation
-  = Invitation { "AccountId" :: NullOrUndefined (String), "InvitationId" :: NullOrUndefined (InvitationId), "InvitedAt" :: NullOrUndefined (InvitedAt), "RelationshipStatus" :: NullOrUndefined (String) }
+  = Invitation { "AccountId" :: Maybe (String), "InvitationId" :: Maybe (InvitationId), "InvitedAt" :: Maybe (InvitedAt), "RelationshipStatus" :: Maybe (String) }
 ```
 
 Invitation from an AWS account to become the current account's master.
@@ -2399,7 +2399,7 @@ Constructs Invitation from required parameters
 #### `newInvitation'`
 
 ``` purescript
-newInvitation' :: ({ "AccountId" :: NullOrUndefined (String), "InvitationId" :: NullOrUndefined (InvitationId), "InvitedAt" :: NullOrUndefined (InvitedAt), "RelationshipStatus" :: NullOrUndefined (String) } -> { "AccountId" :: NullOrUndefined (String), "InvitationId" :: NullOrUndefined (InvitationId), "InvitedAt" :: NullOrUndefined (InvitedAt), "RelationshipStatus" :: NullOrUndefined (String) }) -> Invitation
+newInvitation' :: ({ "AccountId" :: Maybe (String), "InvitationId" :: Maybe (InvitationId), "InvitedAt" :: Maybe (InvitedAt), "RelationshipStatus" :: Maybe (String) } -> { "AccountId" :: Maybe (String), "InvitationId" :: Maybe (InvitationId), "InvitedAt" :: Maybe (InvitedAt), "RelationshipStatus" :: Maybe (String) }) -> Invitation
 ```
 
 Constructs Invitation's fields from required parameters
@@ -2444,7 +2444,7 @@ Encode Invitations
 
 ``` purescript
 newtype InviteMembersRequest
-  = InviteMembersRequest { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String, "Message" :: NullOrUndefined (Message) }
+  = InviteMembersRequest { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String, "Message" :: Maybe (Message) }
 ```
 
 InviteMembers request body.
@@ -2469,7 +2469,7 @@ Constructs InviteMembersRequest from required parameters
 #### `newInviteMembersRequest'`
 
 ``` purescript
-newInviteMembersRequest' :: String -> ({ "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String, "Message" :: NullOrUndefined (Message) } -> { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String, "Message" :: NullOrUndefined (Message) }) -> InviteMembersRequest
+newInviteMembersRequest' :: String -> ({ "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String, "Message" :: Maybe (Message) } -> { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String, "Message" :: Maybe (Message) }) -> InviteMembersRequest
 ```
 
 Constructs InviteMembersRequest's fields from required parameters
@@ -2478,7 +2478,7 @@ Constructs InviteMembersRequest's fields from required parameters
 
 ``` purescript
 newtype InviteMembersResponse
-  = InviteMembersResponse { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }
+  = InviteMembersResponse { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }
 ```
 
 ##### Instances
@@ -2501,7 +2501,7 @@ Constructs InviteMembersResponse from required parameters
 #### `newInviteMembersResponse'`
 
 ``` purescript
-newInviteMembersResponse' :: ({ "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }) -> InviteMembersResponse
+newInviteMembersResponse' :: ({ "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }) -> InviteMembersResponse
 ```
 
 Constructs InviteMembersResponse's fields from required parameters
@@ -2636,7 +2636,7 @@ Encode Ipv6Addresses
 
 ``` purescript
 newtype ListDetectorsRequest
-  = ListDetectorsRequest { "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) }
+  = ListDetectorsRequest { "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2659,7 +2659,7 @@ Constructs ListDetectorsRequest from required parameters
 #### `newListDetectorsRequest'`
 
 ``` purescript
-newListDetectorsRequest' :: ({ "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) } -> { "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) }) -> ListDetectorsRequest
+newListDetectorsRequest' :: ({ "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) } -> { "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) }) -> ListDetectorsRequest
 ```
 
 Constructs ListDetectorsRequest's fields from required parameters
@@ -2668,7 +2668,7 @@ Constructs ListDetectorsRequest's fields from required parameters
 
 ``` purescript
 newtype ListDetectorsResponse
-  = ListDetectorsResponse { "DetectorIds" :: NullOrUndefined (DetectorIds), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListDetectorsResponse { "DetectorIds" :: Maybe (DetectorIds), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -2691,7 +2691,7 @@ Constructs ListDetectorsResponse from required parameters
 #### `newListDetectorsResponse'`
 
 ``` purescript
-newListDetectorsResponse' :: ({ "DetectorIds" :: NullOrUndefined (DetectorIds), "NextToken" :: NullOrUndefined (NextToken) } -> { "DetectorIds" :: NullOrUndefined (DetectorIds), "NextToken" :: NullOrUndefined (NextToken) }) -> ListDetectorsResponse
+newListDetectorsResponse' :: ({ "DetectorIds" :: Maybe (DetectorIds), "NextToken" :: Maybe (NextToken) } -> { "DetectorIds" :: Maybe (DetectorIds), "NextToken" :: Maybe (NextToken) }) -> ListDetectorsResponse
 ```
 
 Constructs ListDetectorsResponse's fields from required parameters
@@ -2700,7 +2700,7 @@ Constructs ListDetectorsResponse's fields from required parameters
 
 ``` purescript
 newtype ListFindingsRequest
-  = ListFindingsRequest { "DetectorId" :: String, "FindingCriteria" :: NullOrUndefined (FindingCriteria), "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (NextToken), "SortCriteria" :: NullOrUndefined (SortCriteria) }
+  = ListFindingsRequest { "DetectorId" :: String, "FindingCriteria" :: Maybe (FindingCriteria), "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (NextToken), "SortCriteria" :: Maybe (SortCriteria) }
 ```
 
 ListFindings request body.
@@ -2725,7 +2725,7 @@ Constructs ListFindingsRequest from required parameters
 #### `newListFindingsRequest'`
 
 ``` purescript
-newListFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingCriteria" :: NullOrUndefined (FindingCriteria), "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (NextToken), "SortCriteria" :: NullOrUndefined (SortCriteria) } -> { "DetectorId" :: String, "FindingCriteria" :: NullOrUndefined (FindingCriteria), "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (NextToken), "SortCriteria" :: NullOrUndefined (SortCriteria) }) -> ListFindingsRequest
+newListFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingCriteria" :: Maybe (FindingCriteria), "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (NextToken), "SortCriteria" :: Maybe (SortCriteria) } -> { "DetectorId" :: String, "FindingCriteria" :: Maybe (FindingCriteria), "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (NextToken), "SortCriteria" :: Maybe (SortCriteria) }) -> ListFindingsRequest
 ```
 
 Constructs ListFindingsRequest's fields from required parameters
@@ -2734,7 +2734,7 @@ Constructs ListFindingsRequest's fields from required parameters
 
 ``` purescript
 newtype ListFindingsResponse
-  = ListFindingsResponse { "FindingIds" :: NullOrUndefined (FindingIds), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListFindingsResponse { "FindingIds" :: Maybe (FindingIds), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -2757,7 +2757,7 @@ Constructs ListFindingsResponse from required parameters
 #### `newListFindingsResponse'`
 
 ``` purescript
-newListFindingsResponse' :: ({ "FindingIds" :: NullOrUndefined (FindingIds), "NextToken" :: NullOrUndefined (NextToken) } -> { "FindingIds" :: NullOrUndefined (FindingIds), "NextToken" :: NullOrUndefined (NextToken) }) -> ListFindingsResponse
+newListFindingsResponse' :: ({ "FindingIds" :: Maybe (FindingIds), "NextToken" :: Maybe (NextToken) } -> { "FindingIds" :: Maybe (FindingIds), "NextToken" :: Maybe (NextToken) }) -> ListFindingsResponse
 ```
 
 Constructs ListFindingsResponse's fields from required parameters
@@ -2766,7 +2766,7 @@ Constructs ListFindingsResponse's fields from required parameters
 
 ``` purescript
 newtype ListIPSetsRequest
-  = ListIPSetsRequest { "DetectorId" :: String, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) }
+  = ListIPSetsRequest { "DetectorId" :: String, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2789,7 +2789,7 @@ Constructs ListIPSetsRequest from required parameters
 #### `newListIPSetsRequest'`
 
 ``` purescript
-newListIPSetsRequest' :: String -> ({ "DetectorId" :: String, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) } -> { "DetectorId" :: String, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) }) -> ListIPSetsRequest
+newListIPSetsRequest' :: String -> ({ "DetectorId" :: String, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) } -> { "DetectorId" :: String, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) }) -> ListIPSetsRequest
 ```
 
 Constructs ListIPSetsRequest's fields from required parameters
@@ -2798,7 +2798,7 @@ Constructs ListIPSetsRequest's fields from required parameters
 
 ``` purescript
 newtype ListIPSetsResponse
-  = ListIPSetsResponse { "IpSetIds" :: NullOrUndefined (IpSetIds), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListIPSetsResponse { "IpSetIds" :: Maybe (IpSetIds), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -2821,7 +2821,7 @@ Constructs ListIPSetsResponse from required parameters
 #### `newListIPSetsResponse'`
 
 ``` purescript
-newListIPSetsResponse' :: ({ "IpSetIds" :: NullOrUndefined (IpSetIds), "NextToken" :: NullOrUndefined (NextToken) } -> { "IpSetIds" :: NullOrUndefined (IpSetIds), "NextToken" :: NullOrUndefined (NextToken) }) -> ListIPSetsResponse
+newListIPSetsResponse' :: ({ "IpSetIds" :: Maybe (IpSetIds), "NextToken" :: Maybe (NextToken) } -> { "IpSetIds" :: Maybe (IpSetIds), "NextToken" :: Maybe (NextToken) }) -> ListIPSetsResponse
 ```
 
 Constructs ListIPSetsResponse's fields from required parameters
@@ -2830,7 +2830,7 @@ Constructs ListIPSetsResponse's fields from required parameters
 
 ``` purescript
 newtype ListInvitationsRequest
-  = ListInvitationsRequest { "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) }
+  = ListInvitationsRequest { "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2853,7 +2853,7 @@ Constructs ListInvitationsRequest from required parameters
 #### `newListInvitationsRequest'`
 
 ``` purescript
-newListInvitationsRequest' :: ({ "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) } -> { "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) }) -> ListInvitationsRequest
+newListInvitationsRequest' :: ({ "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) } -> { "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) }) -> ListInvitationsRequest
 ```
 
 Constructs ListInvitationsRequest's fields from required parameters
@@ -2862,7 +2862,7 @@ Constructs ListInvitationsRequest's fields from required parameters
 
 ``` purescript
 newtype ListInvitationsResponse
-  = ListInvitationsResponse { "Invitations" :: NullOrUndefined (Invitations), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListInvitationsResponse { "Invitations" :: Maybe (Invitations), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -2885,7 +2885,7 @@ Constructs ListInvitationsResponse from required parameters
 #### `newListInvitationsResponse'`
 
 ``` purescript
-newListInvitationsResponse' :: ({ "Invitations" :: NullOrUndefined (Invitations), "NextToken" :: NullOrUndefined (NextToken) } -> { "Invitations" :: NullOrUndefined (Invitations), "NextToken" :: NullOrUndefined (NextToken) }) -> ListInvitationsResponse
+newListInvitationsResponse' :: ({ "Invitations" :: Maybe (Invitations), "NextToken" :: Maybe (NextToken) } -> { "Invitations" :: Maybe (Invitations), "NextToken" :: Maybe (NextToken) }) -> ListInvitationsResponse
 ```
 
 Constructs ListInvitationsResponse's fields from required parameters
@@ -2894,7 +2894,7 @@ Constructs ListInvitationsResponse's fields from required parameters
 
 ``` purescript
 newtype ListMembersRequest
-  = ListMembersRequest { "DetectorId" :: String, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String), "OnlyAssociated" :: NullOrUndefined (String) }
+  = ListMembersRequest { "DetectorId" :: String, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String), "OnlyAssociated" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2917,7 +2917,7 @@ Constructs ListMembersRequest from required parameters
 #### `newListMembersRequest'`
 
 ``` purescript
-newListMembersRequest' :: String -> ({ "DetectorId" :: String, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String), "OnlyAssociated" :: NullOrUndefined (String) } -> { "DetectorId" :: String, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String), "OnlyAssociated" :: NullOrUndefined (String) }) -> ListMembersRequest
+newListMembersRequest' :: String -> ({ "DetectorId" :: String, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String), "OnlyAssociated" :: Maybe (String) } -> { "DetectorId" :: String, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String), "OnlyAssociated" :: Maybe (String) }) -> ListMembersRequest
 ```
 
 Constructs ListMembersRequest's fields from required parameters
@@ -2926,7 +2926,7 @@ Constructs ListMembersRequest's fields from required parameters
 
 ``` purescript
 newtype ListMembersResponse
-  = ListMembersResponse { "Members" :: NullOrUndefined (Members), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListMembersResponse { "Members" :: Maybe (Members), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -2949,7 +2949,7 @@ Constructs ListMembersResponse from required parameters
 #### `newListMembersResponse'`
 
 ``` purescript
-newListMembersResponse' :: ({ "Members" :: NullOrUndefined (Members), "NextToken" :: NullOrUndefined (NextToken) } -> { "Members" :: NullOrUndefined (Members), "NextToken" :: NullOrUndefined (NextToken) }) -> ListMembersResponse
+newListMembersResponse' :: ({ "Members" :: Maybe (Members), "NextToken" :: Maybe (NextToken) } -> { "Members" :: Maybe (Members), "NextToken" :: Maybe (NextToken) }) -> ListMembersResponse
 ```
 
 Constructs ListMembersResponse's fields from required parameters
@@ -2974,7 +2974,7 @@ Encode ListOfPortProbeDetail
 
 ``` purescript
 newtype ListThreatIntelSetsRequest
-  = ListThreatIntelSetsRequest { "DetectorId" :: String, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) }
+  = ListThreatIntelSetsRequest { "DetectorId" :: String, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2997,7 +2997,7 @@ Constructs ListThreatIntelSetsRequest from required parameters
 #### `newListThreatIntelSetsRequest'`
 
 ``` purescript
-newListThreatIntelSetsRequest' :: String -> ({ "DetectorId" :: String, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) } -> { "DetectorId" :: String, "MaxResults" :: NullOrUndefined (MaxResults), "NextToken" :: NullOrUndefined (String) }) -> ListThreatIntelSetsRequest
+newListThreatIntelSetsRequest' :: String -> ({ "DetectorId" :: String, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) } -> { "DetectorId" :: String, "MaxResults" :: Maybe (MaxResults), "NextToken" :: Maybe (String) }) -> ListThreatIntelSetsRequest
 ```
 
 Constructs ListThreatIntelSetsRequest's fields from required parameters
@@ -3006,7 +3006,7 @@ Constructs ListThreatIntelSetsRequest's fields from required parameters
 
 ``` purescript
 newtype ListThreatIntelSetsResponse
-  = ListThreatIntelSetsResponse { "NextToken" :: NullOrUndefined (NextToken), "ThreatIntelSetIds" :: NullOrUndefined (ThreatIntelSetIds) }
+  = ListThreatIntelSetsResponse { "NextToken" :: Maybe (NextToken), "ThreatIntelSetIds" :: Maybe (ThreatIntelSetIds) }
 ```
 
 ##### Instances
@@ -3029,7 +3029,7 @@ Constructs ListThreatIntelSetsResponse from required parameters
 #### `newListThreatIntelSetsResponse'`
 
 ``` purescript
-newListThreatIntelSetsResponse' :: ({ "NextToken" :: NullOrUndefined (NextToken), "ThreatIntelSetIds" :: NullOrUndefined (ThreatIntelSetIds) } -> { "NextToken" :: NullOrUndefined (NextToken), "ThreatIntelSetIds" :: NullOrUndefined (ThreatIntelSetIds) }) -> ListThreatIntelSetsResponse
+newListThreatIntelSetsResponse' :: ({ "NextToken" :: Maybe (NextToken), "ThreatIntelSetIds" :: Maybe (ThreatIntelSetIds) } -> { "NextToken" :: Maybe (NextToken), "ThreatIntelSetIds" :: Maybe (ThreatIntelSetIds) }) -> ListThreatIntelSetsResponse
 ```
 
 Constructs ListThreatIntelSetsResponse's fields from required parameters
@@ -3038,7 +3038,7 @@ Constructs ListThreatIntelSetsResponse's fields from required parameters
 
 ``` purescript
 newtype LocalPortDetails
-  = LocalPortDetails { "Port" :: NullOrUndefined (Int), "PortName" :: NullOrUndefined (String) }
+  = LocalPortDetails { "Port" :: Maybe (Int), "PortName" :: Maybe (String) }
 ```
 
 Local port information of the connection.
@@ -3063,7 +3063,7 @@ Constructs LocalPortDetails from required parameters
 #### `newLocalPortDetails'`
 
 ``` purescript
-newLocalPortDetails' :: ({ "Port" :: NullOrUndefined (Int), "PortName" :: NullOrUndefined (String) } -> { "Port" :: NullOrUndefined (Int), "PortName" :: NullOrUndefined (String) }) -> LocalPortDetails
+newLocalPortDetails' :: ({ "Port" :: Maybe (Int), "PortName" :: Maybe (String) } -> { "Port" :: Maybe (Int), "PortName" :: Maybe (String) }) -> LocalPortDetails
 ```
 
 Constructs LocalPortDetails's fields from required parameters
@@ -3122,7 +3122,7 @@ Encode MapOfCountBySeverityFindingStatistic
 
 ``` purescript
 newtype Master
-  = Master { "AccountId" :: NullOrUndefined (String), "InvitationId" :: NullOrUndefined (InvitationId), "InvitedAt" :: NullOrUndefined (InvitedAt), "RelationshipStatus" :: NullOrUndefined (String) }
+  = Master { "AccountId" :: Maybe (String), "InvitationId" :: Maybe (InvitationId), "InvitedAt" :: Maybe (InvitedAt), "RelationshipStatus" :: Maybe (String) }
 ```
 
 Contains details about the master account.
@@ -3147,7 +3147,7 @@ Constructs Master from required parameters
 #### `newMaster'`
 
 ``` purescript
-newMaster' :: ({ "AccountId" :: NullOrUndefined (String), "InvitationId" :: NullOrUndefined (InvitationId), "InvitedAt" :: NullOrUndefined (InvitedAt), "RelationshipStatus" :: NullOrUndefined (String) } -> { "AccountId" :: NullOrUndefined (String), "InvitationId" :: NullOrUndefined (InvitationId), "InvitedAt" :: NullOrUndefined (InvitedAt), "RelationshipStatus" :: NullOrUndefined (String) }) -> Master
+newMaster' :: ({ "AccountId" :: Maybe (String), "InvitationId" :: Maybe (InvitationId), "InvitedAt" :: Maybe (InvitedAt), "RelationshipStatus" :: Maybe (String) } -> { "AccountId" :: Maybe (String), "InvitationId" :: Maybe (InvitationId), "InvitedAt" :: Maybe (InvitedAt), "RelationshipStatus" :: Maybe (String) }) -> Master
 ```
 
 Constructs Master's fields from required parameters
@@ -3190,7 +3190,7 @@ Encode MaxResults
 
 ``` purescript
 newtype Member
-  = Member { "AccountId" :: NullOrUndefined (AccountId), "DetectorId" :: NullOrUndefined (DetectorId), "Email" :: NullOrUndefined (Email), "InvitedAt" :: NullOrUndefined (InvitedAt), "MasterId" :: NullOrUndefined (MasterId), "RelationshipStatus" :: NullOrUndefined (String), "UpdatedAt" :: NullOrUndefined (UpdatedAt) }
+  = Member { "AccountId" :: Maybe (AccountId), "DetectorId" :: Maybe (DetectorId), "Email" :: Maybe (Email), "InvitedAt" :: Maybe (InvitedAt), "MasterId" :: Maybe (MasterId), "RelationshipStatus" :: Maybe (String), "UpdatedAt" :: Maybe (UpdatedAt) }
 ```
 
 Contains details about the member account.
@@ -3215,7 +3215,7 @@ Constructs Member from required parameters
 #### `newMember'`
 
 ``` purescript
-newMember' :: ({ "AccountId" :: NullOrUndefined (AccountId), "DetectorId" :: NullOrUndefined (DetectorId), "Email" :: NullOrUndefined (Email), "InvitedAt" :: NullOrUndefined (InvitedAt), "MasterId" :: NullOrUndefined (MasterId), "RelationshipStatus" :: NullOrUndefined (String), "UpdatedAt" :: NullOrUndefined (UpdatedAt) } -> { "AccountId" :: NullOrUndefined (AccountId), "DetectorId" :: NullOrUndefined (DetectorId), "Email" :: NullOrUndefined (Email), "InvitedAt" :: NullOrUndefined (InvitedAt), "MasterId" :: NullOrUndefined (MasterId), "RelationshipStatus" :: NullOrUndefined (String), "UpdatedAt" :: NullOrUndefined (UpdatedAt) }) -> Member
+newMember' :: ({ "AccountId" :: Maybe (AccountId), "DetectorId" :: Maybe (DetectorId), "Email" :: Maybe (Email), "InvitedAt" :: Maybe (InvitedAt), "MasterId" :: Maybe (MasterId), "RelationshipStatus" :: Maybe (String), "UpdatedAt" :: Maybe (UpdatedAt) } -> { "AccountId" :: Maybe (AccountId), "DetectorId" :: Maybe (DetectorId), "Email" :: Maybe (Email), "InvitedAt" :: Maybe (InvitedAt), "MasterId" :: Maybe (MasterId), "RelationshipStatus" :: Maybe (String), "UpdatedAt" :: Maybe (UpdatedAt) }) -> Member
 ```
 
 Constructs Member's fields from required parameters
@@ -3296,7 +3296,7 @@ Encode Neq
 
 ``` purescript
 newtype NetworkConnectionAction
-  = NetworkConnectionAction { "Blocked" :: NullOrUndefined (Boolean), "ConnectionDirection" :: NullOrUndefined (String), "LocalPortDetails" :: NullOrUndefined (LocalPortDetails), "Protocol" :: NullOrUndefined (String), "RemoteIpDetails" :: NullOrUndefined (RemoteIpDetails), "RemotePortDetails" :: NullOrUndefined (RemotePortDetails) }
+  = NetworkConnectionAction { "Blocked" :: Maybe (Boolean), "ConnectionDirection" :: Maybe (String), "LocalPortDetails" :: Maybe (LocalPortDetails), "Protocol" :: Maybe (String), "RemoteIpDetails" :: Maybe (RemoteIpDetails), "RemotePortDetails" :: Maybe (RemotePortDetails) }
 ```
 
 Information about the NETWORK_CONNECTION action described in this finding.
@@ -3321,7 +3321,7 @@ Constructs NetworkConnectionAction from required parameters
 #### `newNetworkConnectionAction'`
 
 ``` purescript
-newNetworkConnectionAction' :: ({ "Blocked" :: NullOrUndefined (Boolean), "ConnectionDirection" :: NullOrUndefined (String), "LocalPortDetails" :: NullOrUndefined (LocalPortDetails), "Protocol" :: NullOrUndefined (String), "RemoteIpDetails" :: NullOrUndefined (RemoteIpDetails), "RemotePortDetails" :: NullOrUndefined (RemotePortDetails) } -> { "Blocked" :: NullOrUndefined (Boolean), "ConnectionDirection" :: NullOrUndefined (String), "LocalPortDetails" :: NullOrUndefined (LocalPortDetails), "Protocol" :: NullOrUndefined (String), "RemoteIpDetails" :: NullOrUndefined (RemoteIpDetails), "RemotePortDetails" :: NullOrUndefined (RemotePortDetails) }) -> NetworkConnectionAction
+newNetworkConnectionAction' :: ({ "Blocked" :: Maybe (Boolean), "ConnectionDirection" :: Maybe (String), "LocalPortDetails" :: Maybe (LocalPortDetails), "Protocol" :: Maybe (String), "RemoteIpDetails" :: Maybe (RemoteIpDetails), "RemotePortDetails" :: Maybe (RemotePortDetails) } -> { "Blocked" :: Maybe (Boolean), "ConnectionDirection" :: Maybe (String), "LocalPortDetails" :: Maybe (LocalPortDetails), "Protocol" :: Maybe (String), "RemoteIpDetails" :: Maybe (RemoteIpDetails), "RemotePortDetails" :: Maybe (RemotePortDetails) }) -> NetworkConnectionAction
 ```
 
 Constructs NetworkConnectionAction's fields from required parameters
@@ -3330,7 +3330,7 @@ Constructs NetworkConnectionAction's fields from required parameters
 
 ``` purescript
 newtype NetworkInterface
-  = NetworkInterface { "Ipv6Addresses" :: NullOrUndefined (Ipv6Addresses), "PrivateDnsName" :: NullOrUndefined (PrivateDnsName), "PrivateIpAddress" :: NullOrUndefined (PrivateIpAddress), "PrivateIpAddresses" :: NullOrUndefined (PrivateIpAddresses), "PublicDnsName" :: NullOrUndefined (String), "PublicIp" :: NullOrUndefined (String), "SecurityGroups" :: NullOrUndefined (SecurityGroups), "SubnetId" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String) }
+  = NetworkInterface { "Ipv6Addresses" :: Maybe (Ipv6Addresses), "PrivateDnsName" :: Maybe (PrivateDnsName), "PrivateIpAddress" :: Maybe (PrivateIpAddress), "PrivateIpAddresses" :: Maybe (PrivateIpAddresses), "PublicDnsName" :: Maybe (String), "PublicIp" :: Maybe (String), "SecurityGroups" :: Maybe (SecurityGroups), "SubnetId" :: Maybe (String), "VpcId" :: Maybe (String) }
 ```
 
 The network interface information of the EC2 instance.
@@ -3355,7 +3355,7 @@ Constructs NetworkInterface from required parameters
 #### `newNetworkInterface'`
 
 ``` purescript
-newNetworkInterface' :: ({ "Ipv6Addresses" :: NullOrUndefined (Ipv6Addresses), "PrivateDnsName" :: NullOrUndefined (PrivateDnsName), "PrivateIpAddress" :: NullOrUndefined (PrivateIpAddress), "PrivateIpAddresses" :: NullOrUndefined (PrivateIpAddresses), "PublicDnsName" :: NullOrUndefined (String), "PublicIp" :: NullOrUndefined (String), "SecurityGroups" :: NullOrUndefined (SecurityGroups), "SubnetId" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String) } -> { "Ipv6Addresses" :: NullOrUndefined (Ipv6Addresses), "PrivateDnsName" :: NullOrUndefined (PrivateDnsName), "PrivateIpAddress" :: NullOrUndefined (PrivateIpAddress), "PrivateIpAddresses" :: NullOrUndefined (PrivateIpAddresses), "PublicDnsName" :: NullOrUndefined (String), "PublicIp" :: NullOrUndefined (String), "SecurityGroups" :: NullOrUndefined (SecurityGroups), "SubnetId" :: NullOrUndefined (String), "VpcId" :: NullOrUndefined (String) }) -> NetworkInterface
+newNetworkInterface' :: ({ "Ipv6Addresses" :: Maybe (Ipv6Addresses), "PrivateDnsName" :: Maybe (PrivateDnsName), "PrivateIpAddress" :: Maybe (PrivateIpAddress), "PrivateIpAddresses" :: Maybe (PrivateIpAddresses), "PublicDnsName" :: Maybe (String), "PublicIp" :: Maybe (String), "SecurityGroups" :: Maybe (SecurityGroups), "SubnetId" :: Maybe (String), "VpcId" :: Maybe (String) } -> { "Ipv6Addresses" :: Maybe (Ipv6Addresses), "PrivateDnsName" :: Maybe (PrivateDnsName), "PrivateIpAddress" :: Maybe (PrivateIpAddress), "PrivateIpAddresses" :: Maybe (PrivateIpAddresses), "PublicDnsName" :: Maybe (String), "PublicIp" :: Maybe (String), "SecurityGroups" :: Maybe (SecurityGroups), "SubnetId" :: Maybe (String), "VpcId" :: Maybe (String) }) -> NetworkInterface
 ```
 
 Constructs NetworkInterface's fields from required parameters
@@ -3416,7 +3416,7 @@ Encode OrderBy
 
 ``` purescript
 newtype Organization
-  = Organization { "Asn" :: NullOrUndefined (String), "AsnOrg" :: NullOrUndefined (String), "Isp" :: NullOrUndefined (String), "Org" :: NullOrUndefined (String) }
+  = Organization { "Asn" :: Maybe (String), "AsnOrg" :: Maybe (String), "Isp" :: Maybe (String), "Org" :: Maybe (String) }
 ```
 
 ISP Organization information of the remote IP address.
@@ -3441,7 +3441,7 @@ Constructs Organization from required parameters
 #### `newOrganization'`
 
 ``` purescript
-newOrganization' :: ({ "Asn" :: NullOrUndefined (String), "AsnOrg" :: NullOrUndefined (String), "Isp" :: NullOrUndefined (String), "Org" :: NullOrUndefined (String) } -> { "Asn" :: NullOrUndefined (String), "AsnOrg" :: NullOrUndefined (String), "Isp" :: NullOrUndefined (String), "Org" :: NullOrUndefined (String) }) -> Organization
+newOrganization' :: ({ "Asn" :: Maybe (String), "AsnOrg" :: Maybe (String), "Isp" :: Maybe (String), "Org" :: Maybe (String) } -> { "Asn" :: Maybe (String), "AsnOrg" :: Maybe (String), "Isp" :: Maybe (String), "Org" :: Maybe (String) }) -> Organization
 ```
 
 Constructs Organization's fields from required parameters
@@ -3450,7 +3450,7 @@ Constructs Organization's fields from required parameters
 
 ``` purescript
 newtype PortProbeAction
-  = PortProbeAction { "Blocked" :: NullOrUndefined (Boolean), "PortProbeDetails" :: NullOrUndefined (ListOfPortProbeDetail) }
+  = PortProbeAction { "Blocked" :: Maybe (Boolean), "PortProbeDetails" :: Maybe (ListOfPortProbeDetail) }
 ```
 
 Information about the PORT_PROBE action described in this finding.
@@ -3475,7 +3475,7 @@ Constructs PortProbeAction from required parameters
 #### `newPortProbeAction'`
 
 ``` purescript
-newPortProbeAction' :: ({ "Blocked" :: NullOrUndefined (Boolean), "PortProbeDetails" :: NullOrUndefined (ListOfPortProbeDetail) } -> { "Blocked" :: NullOrUndefined (Boolean), "PortProbeDetails" :: NullOrUndefined (ListOfPortProbeDetail) }) -> PortProbeAction
+newPortProbeAction' :: ({ "Blocked" :: Maybe (Boolean), "PortProbeDetails" :: Maybe (ListOfPortProbeDetail) } -> { "Blocked" :: Maybe (Boolean), "PortProbeDetails" :: Maybe (ListOfPortProbeDetail) }) -> PortProbeAction
 ```
 
 Constructs PortProbeAction's fields from required parameters
@@ -3484,7 +3484,7 @@ Constructs PortProbeAction's fields from required parameters
 
 ``` purescript
 newtype PortProbeDetail
-  = PortProbeDetail { "LocalPortDetails" :: NullOrUndefined (LocalPortDetails), "RemoteIpDetails" :: NullOrUndefined (RemoteIpDetails) }
+  = PortProbeDetail { "LocalPortDetails" :: Maybe (LocalPortDetails), "RemoteIpDetails" :: Maybe (RemoteIpDetails) }
 ```
 
 Details about the port probe finding.
@@ -3509,7 +3509,7 @@ Constructs PortProbeDetail from required parameters
 #### `newPortProbeDetail'`
 
 ``` purescript
-newPortProbeDetail' :: ({ "LocalPortDetails" :: NullOrUndefined (LocalPortDetails), "RemoteIpDetails" :: NullOrUndefined (RemoteIpDetails) } -> { "LocalPortDetails" :: NullOrUndefined (LocalPortDetails), "RemoteIpDetails" :: NullOrUndefined (RemoteIpDetails) }) -> PortProbeDetail
+newPortProbeDetail' :: ({ "LocalPortDetails" :: Maybe (LocalPortDetails), "RemoteIpDetails" :: Maybe (RemoteIpDetails) } -> { "LocalPortDetails" :: Maybe (LocalPortDetails), "RemoteIpDetails" :: Maybe (RemoteIpDetails) }) -> PortProbeDetail
 ```
 
 Constructs PortProbeDetail's fields from required parameters
@@ -3554,7 +3554,7 @@ Encode PrivateIpAddress
 
 ``` purescript
 newtype PrivateIpAddressDetails
-  = PrivateIpAddressDetails { "PrivateDnsName" :: NullOrUndefined (PrivateDnsName), "PrivateIpAddress" :: NullOrUndefined (PrivateIpAddress) }
+  = PrivateIpAddressDetails { "PrivateDnsName" :: Maybe (PrivateDnsName), "PrivateIpAddress" :: Maybe (PrivateIpAddress) }
 ```
 
 Other private IP address information of the EC2 instance.
@@ -3579,7 +3579,7 @@ Constructs PrivateIpAddressDetails from required parameters
 #### `newPrivateIpAddressDetails'`
 
 ``` purescript
-newPrivateIpAddressDetails' :: ({ "PrivateDnsName" :: NullOrUndefined (PrivateDnsName), "PrivateIpAddress" :: NullOrUndefined (PrivateIpAddress) } -> { "PrivateDnsName" :: NullOrUndefined (PrivateDnsName), "PrivateIpAddress" :: NullOrUndefined (PrivateIpAddress) }) -> PrivateIpAddressDetails
+newPrivateIpAddressDetails' :: ({ "PrivateDnsName" :: Maybe (PrivateDnsName), "PrivateIpAddress" :: Maybe (PrivateIpAddress) } -> { "PrivateDnsName" :: Maybe (PrivateDnsName), "PrivateIpAddress" :: Maybe (PrivateIpAddress) }) -> PrivateIpAddressDetails
 ```
 
 Constructs PrivateIpAddressDetails's fields from required parameters
@@ -3606,7 +3606,7 @@ Encode PrivateIpAddresses
 
 ``` purescript
 newtype ProductCode
-  = ProductCode { "Code" :: NullOrUndefined (String), "ProductType" :: NullOrUndefined (String) }
+  = ProductCode { "Code" :: Maybe (String), "ProductType" :: Maybe (String) }
 ```
 
 The product code of the EC2 instance.
@@ -3631,7 +3631,7 @@ Constructs ProductCode from required parameters
 #### `newProductCode'`
 
 ``` purescript
-newProductCode' :: ({ "Code" :: NullOrUndefined (String), "ProductType" :: NullOrUndefined (String) } -> { "Code" :: NullOrUndefined (String), "ProductType" :: NullOrUndefined (String) }) -> ProductCode
+newProductCode' :: ({ "Code" :: Maybe (String), "ProductType" :: Maybe (String) } -> { "Code" :: Maybe (String), "ProductType" :: Maybe (String) }) -> ProductCode
 ```
 
 Constructs ProductCode's fields from required parameters
@@ -3658,7 +3658,7 @@ Encode ProductCodes
 
 ``` purescript
 newtype RemoteIpDetails
-  = RemoteIpDetails { "City" :: NullOrUndefined (City), "Country" :: NullOrUndefined (Country), "GeoLocation" :: NullOrUndefined (GeoLocation), "IpAddressV4" :: NullOrUndefined (String), "Organization" :: NullOrUndefined (Organization) }
+  = RemoteIpDetails { "City" :: Maybe (City), "Country" :: Maybe (Country), "GeoLocation" :: Maybe (GeoLocation), "IpAddressV4" :: Maybe (String), "Organization" :: Maybe (Organization) }
 ```
 
 Remote IP information of the connection.
@@ -3683,7 +3683,7 @@ Constructs RemoteIpDetails from required parameters
 #### `newRemoteIpDetails'`
 
 ``` purescript
-newRemoteIpDetails' :: ({ "City" :: NullOrUndefined (City), "Country" :: NullOrUndefined (Country), "GeoLocation" :: NullOrUndefined (GeoLocation), "IpAddressV4" :: NullOrUndefined (String), "Organization" :: NullOrUndefined (Organization) } -> { "City" :: NullOrUndefined (City), "Country" :: NullOrUndefined (Country), "GeoLocation" :: NullOrUndefined (GeoLocation), "IpAddressV4" :: NullOrUndefined (String), "Organization" :: NullOrUndefined (Organization) }) -> RemoteIpDetails
+newRemoteIpDetails' :: ({ "City" :: Maybe (City), "Country" :: Maybe (Country), "GeoLocation" :: Maybe (GeoLocation), "IpAddressV4" :: Maybe (String), "Organization" :: Maybe (Organization) } -> { "City" :: Maybe (City), "Country" :: Maybe (Country), "GeoLocation" :: Maybe (GeoLocation), "IpAddressV4" :: Maybe (String), "Organization" :: Maybe (Organization) }) -> RemoteIpDetails
 ```
 
 Constructs RemoteIpDetails's fields from required parameters
@@ -3692,7 +3692,7 @@ Constructs RemoteIpDetails's fields from required parameters
 
 ``` purescript
 newtype RemotePortDetails
-  = RemotePortDetails { "Port" :: NullOrUndefined (Int), "PortName" :: NullOrUndefined (String) }
+  = RemotePortDetails { "Port" :: Maybe (Int), "PortName" :: Maybe (String) }
 ```
 
 Remote port information of the connection.
@@ -3717,7 +3717,7 @@ Constructs RemotePortDetails from required parameters
 #### `newRemotePortDetails'`
 
 ``` purescript
-newRemotePortDetails' :: ({ "Port" :: NullOrUndefined (Int), "PortName" :: NullOrUndefined (String) } -> { "Port" :: NullOrUndefined (Int), "PortName" :: NullOrUndefined (String) }) -> RemotePortDetails
+newRemotePortDetails' :: ({ "Port" :: Maybe (Int), "PortName" :: Maybe (String) } -> { "Port" :: Maybe (Int), "PortName" :: Maybe (String) }) -> RemotePortDetails
 ```
 
 Constructs RemotePortDetails's fields from required parameters
@@ -3726,7 +3726,7 @@ Constructs RemotePortDetails's fields from required parameters
 
 ``` purescript
 newtype Resource
-  = Resource { "AccessKeyDetails" :: NullOrUndefined (AccessKeyDetails), "InstanceDetails" :: NullOrUndefined (InstanceDetails), "ResourceType" :: NullOrUndefined (String) }
+  = Resource { "AccessKeyDetails" :: Maybe (AccessKeyDetails), "InstanceDetails" :: Maybe (InstanceDetails), "ResourceType" :: Maybe (String) }
 ```
 
 The AWS resource associated with the activity that prompted GuardDuty to generate a finding.
@@ -3751,7 +3751,7 @@ Constructs Resource from required parameters
 #### `newResource'`
 
 ``` purescript
-newResource' :: ({ "AccessKeyDetails" :: NullOrUndefined (AccessKeyDetails), "InstanceDetails" :: NullOrUndefined (InstanceDetails), "ResourceType" :: NullOrUndefined (String) } -> { "AccessKeyDetails" :: NullOrUndefined (AccessKeyDetails), "InstanceDetails" :: NullOrUndefined (InstanceDetails), "ResourceType" :: NullOrUndefined (String) }) -> Resource
+newResource' :: ({ "AccessKeyDetails" :: Maybe (AccessKeyDetails), "InstanceDetails" :: Maybe (InstanceDetails), "ResourceType" :: Maybe (String) } -> { "AccessKeyDetails" :: Maybe (AccessKeyDetails), "InstanceDetails" :: Maybe (InstanceDetails), "ResourceType" :: Maybe (String) }) -> Resource
 ```
 
 Constructs Resource's fields from required parameters
@@ -3760,7 +3760,7 @@ Constructs Resource's fields from required parameters
 
 ``` purescript
 newtype SecurityGroup
-  = SecurityGroup { "GroupId" :: NullOrUndefined (String), "GroupName" :: NullOrUndefined (String) }
+  = SecurityGroup { "GroupId" :: Maybe (String), "GroupName" :: Maybe (String) }
 ```
 
 Security groups associated with the EC2 instance.
@@ -3785,7 +3785,7 @@ Constructs SecurityGroup from required parameters
 #### `newSecurityGroup'`
 
 ``` purescript
-newSecurityGroup' :: ({ "GroupId" :: NullOrUndefined (String), "GroupName" :: NullOrUndefined (String) } -> { "GroupId" :: NullOrUndefined (String), "GroupName" :: NullOrUndefined (String) }) -> SecurityGroup
+newSecurityGroup' :: ({ "GroupId" :: Maybe (String), "GroupName" :: Maybe (String) } -> { "GroupId" :: Maybe (String), "GroupName" :: Maybe (String) }) -> SecurityGroup
 ```
 
 Constructs SecurityGroup's fields from required parameters
@@ -3812,7 +3812,7 @@ Encode SecurityGroups
 
 ``` purescript
 newtype Service
-  = Service { "Action" :: NullOrUndefined (Action), "Archived" :: NullOrUndefined (Boolean), "Count" :: NullOrUndefined (Int), "DetectorId" :: NullOrUndefined (DetectorId), "EventFirstSeen" :: NullOrUndefined (String), "EventLastSeen" :: NullOrUndefined (String), "ResourceRole" :: NullOrUndefined (String), "ServiceName" :: NullOrUndefined (String), "UserFeedback" :: NullOrUndefined (String) }
+  = Service { "Action" :: Maybe (Action), "Archived" :: Maybe (Boolean), "Count" :: Maybe (Int), "DetectorId" :: Maybe (DetectorId), "EventFirstSeen" :: Maybe (String), "EventLastSeen" :: Maybe (String), "ResourceRole" :: Maybe (String), "ServiceName" :: Maybe (String), "UserFeedback" :: Maybe (String) }
 ```
 
 Additional information assigned to the generated finding by GuardDuty.
@@ -3837,7 +3837,7 @@ Constructs Service from required parameters
 #### `newService'`
 
 ``` purescript
-newService' :: ({ "Action" :: NullOrUndefined (Action), "Archived" :: NullOrUndefined (Boolean), "Count" :: NullOrUndefined (Int), "DetectorId" :: NullOrUndefined (DetectorId), "EventFirstSeen" :: NullOrUndefined (String), "EventLastSeen" :: NullOrUndefined (String), "ResourceRole" :: NullOrUndefined (String), "ServiceName" :: NullOrUndefined (String), "UserFeedback" :: NullOrUndefined (String) } -> { "Action" :: NullOrUndefined (Action), "Archived" :: NullOrUndefined (Boolean), "Count" :: NullOrUndefined (Int), "DetectorId" :: NullOrUndefined (DetectorId), "EventFirstSeen" :: NullOrUndefined (String), "EventLastSeen" :: NullOrUndefined (String), "ResourceRole" :: NullOrUndefined (String), "ServiceName" :: NullOrUndefined (String), "UserFeedback" :: NullOrUndefined (String) }) -> Service
+newService' :: ({ "Action" :: Maybe (Action), "Archived" :: Maybe (Boolean), "Count" :: Maybe (Int), "DetectorId" :: Maybe (DetectorId), "EventFirstSeen" :: Maybe (String), "EventLastSeen" :: Maybe (String), "ResourceRole" :: Maybe (String), "ServiceName" :: Maybe (String), "UserFeedback" :: Maybe (String) } -> { "Action" :: Maybe (Action), "Archived" :: Maybe (Boolean), "Count" :: Maybe (Int), "DetectorId" :: Maybe (DetectorId), "EventFirstSeen" :: Maybe (String), "EventLastSeen" :: Maybe (String), "ResourceRole" :: Maybe (String), "ServiceName" :: Maybe (String), "UserFeedback" :: Maybe (String) }) -> Service
 ```
 
 Constructs Service's fields from required parameters
@@ -3864,7 +3864,7 @@ Encode ServiceRole
 
 ``` purescript
 newtype SortCriteria
-  = SortCriteria { "AttributeName" :: NullOrUndefined (String), "OrderBy" :: NullOrUndefined (OrderBy) }
+  = SortCriteria { "AttributeName" :: Maybe (String), "OrderBy" :: Maybe (OrderBy) }
 ```
 
 Represents the criteria used for sorting findings.
@@ -3889,7 +3889,7 @@ Constructs SortCriteria from required parameters
 #### `newSortCriteria'`
 
 ``` purescript
-newSortCriteria' :: ({ "AttributeName" :: NullOrUndefined (String), "OrderBy" :: NullOrUndefined (OrderBy) } -> { "AttributeName" :: NullOrUndefined (String), "OrderBy" :: NullOrUndefined (OrderBy) }) -> SortCriteria
+newSortCriteria' :: ({ "AttributeName" :: Maybe (String), "OrderBy" :: Maybe (OrderBy) } -> { "AttributeName" :: Maybe (String), "OrderBy" :: Maybe (OrderBy) }) -> SortCriteria
 ```
 
 Constructs SortCriteria's fields from required parameters
@@ -3898,7 +3898,7 @@ Constructs SortCriteria's fields from required parameters
 
 ``` purescript
 newtype StartMonitoringMembersRequest
-  = StartMonitoringMembersRequest { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }
+  = StartMonitoringMembersRequest { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }
 ```
 
 StartMonitoringMembers request body.
@@ -3923,7 +3923,7 @@ Constructs StartMonitoringMembersRequest from required parameters
 #### `newStartMonitoringMembersRequest'`
 
 ``` purescript
-newStartMonitoringMembersRequest' :: String -> ({ "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }) -> StartMonitoringMembersRequest
+newStartMonitoringMembersRequest' :: String -> ({ "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }) -> StartMonitoringMembersRequest
 ```
 
 Constructs StartMonitoringMembersRequest's fields from required parameters
@@ -3932,7 +3932,7 @@ Constructs StartMonitoringMembersRequest's fields from required parameters
 
 ``` purescript
 newtype StartMonitoringMembersResponse
-  = StartMonitoringMembersResponse { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }
+  = StartMonitoringMembersResponse { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }
 ```
 
 ##### Instances
@@ -3955,7 +3955,7 @@ Constructs StartMonitoringMembersResponse from required parameters
 #### `newStartMonitoringMembersResponse'`
 
 ``` purescript
-newStartMonitoringMembersResponse' :: ({ "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }) -> StartMonitoringMembersResponse
+newStartMonitoringMembersResponse' :: ({ "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }) -> StartMonitoringMembersResponse
 ```
 
 Constructs StartMonitoringMembersResponse's fields from required parameters
@@ -3964,7 +3964,7 @@ Constructs StartMonitoringMembersResponse's fields from required parameters
 
 ``` purescript
 newtype StopMonitoringMembersRequest
-  = StopMonitoringMembersRequest { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }
+  = StopMonitoringMembersRequest { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }
 ```
 
 StopMonitoringMembers request body.
@@ -3989,7 +3989,7 @@ Constructs StopMonitoringMembersRequest from required parameters
 #### `newStopMonitoringMembersRequest'`
 
 ``` purescript
-newStopMonitoringMembersRequest' :: String -> ({ "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: NullOrUndefined (AccountIds), "DetectorId" :: String }) -> StopMonitoringMembersRequest
+newStopMonitoringMembersRequest' :: String -> ({ "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String } -> { "AccountIds" :: Maybe (AccountIds), "DetectorId" :: String }) -> StopMonitoringMembersRequest
 ```
 
 Constructs StopMonitoringMembersRequest's fields from required parameters
@@ -3998,7 +3998,7 @@ Constructs StopMonitoringMembersRequest's fields from required parameters
 
 ``` purescript
 newtype StopMonitoringMembersResponse
-  = StopMonitoringMembersResponse { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }
+  = StopMonitoringMembersResponse { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }
 ```
 
 ##### Instances
@@ -4021,7 +4021,7 @@ Constructs StopMonitoringMembersResponse from required parameters
 #### `newStopMonitoringMembersResponse'`
 
 ``` purescript
-newStopMonitoringMembersResponse' :: ({ "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: NullOrUndefined (UnprocessedAccounts) }) -> StopMonitoringMembersResponse
+newStopMonitoringMembersResponse' :: ({ "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) } -> { "UnprocessedAccounts" :: Maybe (UnprocessedAccounts) }) -> StopMonitoringMembersResponse
 ```
 
 Constructs StopMonitoringMembersResponse's fields from required parameters
@@ -4030,7 +4030,7 @@ Constructs StopMonitoringMembersResponse's fields from required parameters
 
 ``` purescript
 newtype Tag
-  = Tag { "Key" :: NullOrUndefined (String), "Value" :: NullOrUndefined (String) }
+  = Tag { "Key" :: Maybe (String), "Value" :: Maybe (String) }
 ```
 
 A tag of the EC2 instance.
@@ -4055,7 +4055,7 @@ Constructs Tag from required parameters
 #### `newTag'`
 
 ``` purescript
-newTag' :: ({ "Key" :: NullOrUndefined (String), "Value" :: NullOrUndefined (String) } -> { "Key" :: NullOrUndefined (String), "Value" :: NullOrUndefined (String) }) -> Tag
+newTag' :: ({ "Key" :: Maybe (String), "Value" :: Maybe (String) } -> { "Key" :: Maybe (String), "Value" :: Maybe (String) }) -> Tag
 ```
 
 Constructs Tag's fields from required parameters
@@ -4154,7 +4154,7 @@ Encode ThreatIntelSetStatus
 
 ``` purescript
 newtype UnarchiveFindingsRequest
-  = UnarchiveFindingsRequest { "DetectorId" :: String, "FindingIds" :: NullOrUndefined (FindingIds) }
+  = UnarchiveFindingsRequest { "DetectorId" :: String, "FindingIds" :: Maybe (FindingIds) }
 ```
 
 UnarchiveFindings request body.
@@ -4179,7 +4179,7 @@ Constructs UnarchiveFindingsRequest from required parameters
 #### `newUnarchiveFindingsRequest'`
 
 ``` purescript
-newUnarchiveFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingIds" :: NullOrUndefined (FindingIds) } -> { "DetectorId" :: String, "FindingIds" :: NullOrUndefined (FindingIds) }) -> UnarchiveFindingsRequest
+newUnarchiveFindingsRequest' :: String -> ({ "DetectorId" :: String, "FindingIds" :: Maybe (FindingIds) } -> { "DetectorId" :: String, "FindingIds" :: Maybe (FindingIds) }) -> UnarchiveFindingsRequest
 ```
 
 Constructs UnarchiveFindingsRequest's fields from required parameters
@@ -4204,7 +4204,7 @@ Encode UnarchiveFindingsResponse
 
 ``` purescript
 newtype UnprocessedAccount
-  = UnprocessedAccount { "AccountId" :: NullOrUndefined (String), "Result" :: NullOrUndefined (String) }
+  = UnprocessedAccount { "AccountId" :: Maybe (String), "Result" :: Maybe (String) }
 ```
 
 An object containing the unprocessed account and a result string explaining why it was unprocessed.
@@ -4229,7 +4229,7 @@ Constructs UnprocessedAccount from required parameters
 #### `newUnprocessedAccount'`
 
 ``` purescript
-newUnprocessedAccount' :: ({ "AccountId" :: NullOrUndefined (String), "Result" :: NullOrUndefined (String) } -> { "AccountId" :: NullOrUndefined (String), "Result" :: NullOrUndefined (String) }) -> UnprocessedAccount
+newUnprocessedAccount' :: ({ "AccountId" :: Maybe (String), "Result" :: Maybe (String) } -> { "AccountId" :: Maybe (String), "Result" :: Maybe (String) }) -> UnprocessedAccount
 ```
 
 Constructs UnprocessedAccount's fields from required parameters
@@ -4256,7 +4256,7 @@ Encode UnprocessedAccounts
 
 ``` purescript
 newtype UpdateDetectorRequest
-  = UpdateDetectorRequest { "DetectorId" :: String, "Enable" :: NullOrUndefined (Enable) }
+  = UpdateDetectorRequest { "DetectorId" :: String, "Enable" :: Maybe (Enable) }
 ```
 
 UpdateDetector request body.
@@ -4281,7 +4281,7 @@ Constructs UpdateDetectorRequest from required parameters
 #### `newUpdateDetectorRequest'`
 
 ``` purescript
-newUpdateDetectorRequest' :: String -> ({ "DetectorId" :: String, "Enable" :: NullOrUndefined (Enable) } -> { "DetectorId" :: String, "Enable" :: NullOrUndefined (Enable) }) -> UpdateDetectorRequest
+newUpdateDetectorRequest' :: String -> ({ "DetectorId" :: String, "Enable" :: Maybe (Enable) } -> { "DetectorId" :: String, "Enable" :: Maybe (Enable) }) -> UpdateDetectorRequest
 ```
 
 Constructs UpdateDetectorRequest's fields from required parameters
@@ -4306,7 +4306,7 @@ Encode UpdateDetectorResponse
 
 ``` purescript
 newtype UpdateFindingsFeedbackRequest
-  = UpdateFindingsFeedbackRequest { "Comments" :: NullOrUndefined (Comments), "DetectorId" :: String, "Feedback" :: NullOrUndefined (Feedback), "FindingIds" :: NullOrUndefined (FindingIds) }
+  = UpdateFindingsFeedbackRequest { "Comments" :: Maybe (Comments), "DetectorId" :: String, "Feedback" :: Maybe (Feedback), "FindingIds" :: Maybe (FindingIds) }
 ```
 
 UpdateFindingsFeedback request body.
@@ -4331,7 +4331,7 @@ Constructs UpdateFindingsFeedbackRequest from required parameters
 #### `newUpdateFindingsFeedbackRequest'`
 
 ``` purescript
-newUpdateFindingsFeedbackRequest' :: String -> ({ "Comments" :: NullOrUndefined (Comments), "DetectorId" :: String, "Feedback" :: NullOrUndefined (Feedback), "FindingIds" :: NullOrUndefined (FindingIds) } -> { "Comments" :: NullOrUndefined (Comments), "DetectorId" :: String, "Feedback" :: NullOrUndefined (Feedback), "FindingIds" :: NullOrUndefined (FindingIds) }) -> UpdateFindingsFeedbackRequest
+newUpdateFindingsFeedbackRequest' :: String -> ({ "Comments" :: Maybe (Comments), "DetectorId" :: String, "Feedback" :: Maybe (Feedback), "FindingIds" :: Maybe (FindingIds) } -> { "Comments" :: Maybe (Comments), "DetectorId" :: String, "Feedback" :: Maybe (Feedback), "FindingIds" :: Maybe (FindingIds) }) -> UpdateFindingsFeedbackRequest
 ```
 
 Constructs UpdateFindingsFeedbackRequest's fields from required parameters
@@ -4356,7 +4356,7 @@ Encode UpdateFindingsFeedbackResponse
 
 ``` purescript
 newtype UpdateIPSetRequest
-  = UpdateIPSetRequest { "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "IpSetId" :: String, "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name) }
+  = UpdateIPSetRequest { "Activate" :: Maybe (Activate), "DetectorId" :: String, "IpSetId" :: String, "Location" :: Maybe (Location), "Name" :: Maybe (Name) }
 ```
 
 UpdateIPSet request body.
@@ -4381,7 +4381,7 @@ Constructs UpdateIPSetRequest from required parameters
 #### `newUpdateIPSetRequest'`
 
 ``` purescript
-newUpdateIPSetRequest' :: String -> String -> ({ "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "IpSetId" :: String, "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name) } -> { "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "IpSetId" :: String, "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name) }) -> UpdateIPSetRequest
+newUpdateIPSetRequest' :: String -> String -> ({ "Activate" :: Maybe (Activate), "DetectorId" :: String, "IpSetId" :: String, "Location" :: Maybe (Location), "Name" :: Maybe (Name) } -> { "Activate" :: Maybe (Activate), "DetectorId" :: String, "IpSetId" :: String, "Location" :: Maybe (Location), "Name" :: Maybe (Name) }) -> UpdateIPSetRequest
 ```
 
 Constructs UpdateIPSetRequest's fields from required parameters
@@ -4406,7 +4406,7 @@ Encode UpdateIPSetResponse
 
 ``` purescript
 newtype UpdateThreatIntelSetRequest
-  = UpdateThreatIntelSetRequest { "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name), "ThreatIntelSetId" :: String }
+  = UpdateThreatIntelSetRequest { "Activate" :: Maybe (Activate), "DetectorId" :: String, "Location" :: Maybe (Location), "Name" :: Maybe (Name), "ThreatIntelSetId" :: String }
 ```
 
 UpdateThreatIntelSet request body.
@@ -4431,7 +4431,7 @@ Constructs UpdateThreatIntelSetRequest from required parameters
 #### `newUpdateThreatIntelSetRequest'`
 
 ``` purescript
-newUpdateThreatIntelSetRequest' :: String -> String -> ({ "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name), "ThreatIntelSetId" :: String } -> { "Activate" :: NullOrUndefined (Activate), "DetectorId" :: String, "Location" :: NullOrUndefined (Location), "Name" :: NullOrUndefined (Name), "ThreatIntelSetId" :: String }) -> UpdateThreatIntelSetRequest
+newUpdateThreatIntelSetRequest' :: String -> String -> ({ "Activate" :: Maybe (Activate), "DetectorId" :: String, "Location" :: Maybe (Location), "Name" :: Maybe (Name), "ThreatIntelSetId" :: String } -> { "Activate" :: Maybe (Activate), "DetectorId" :: String, "Location" :: Maybe (Location), "Name" :: Maybe (Name), "ThreatIntelSetId" :: String }) -> UpdateThreatIntelSetRequest
 ```
 
 Constructs UpdateThreatIntelSetRequest's fields from required parameters
